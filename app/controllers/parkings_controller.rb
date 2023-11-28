@@ -34,9 +34,13 @@ class ParkingsController < ApplicationController
   def set_parking
     @parking = Parking.find(params[:id])
   end
-
-  def parking_params
-    # Ajoutez ici les paramètres autorisés lors de la mise à jour du parking
-    params.require(:parking).permit(:nom, :adresse, :capacite, :autre_attribut)
+  
+  def create
+  @parking = Parking.new(parking_params)
+    if @parking.save
+    redirect_to parking_path(@parking)
+    else
+    render "parkings/show", status: :unprocessable_entity
+    end
   end
 end
