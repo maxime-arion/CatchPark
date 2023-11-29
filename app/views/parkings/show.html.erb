@@ -1,0 +1,8 @@
+<h1>Détails du Parking</h1>
+
+<p>Longitude: <%= @parking.longitude %></p>
+<p>Latitude: <%= @parking.latitude %></p>
+<p>Status: <%= @parking.status ? 'Disponible' : 'Non disponible' %></p>
+
+<%= link_to 'Modifier', edit_parking_path(@parking) %>
+<%= link_to 'Retour à la liste', parkings_path %>

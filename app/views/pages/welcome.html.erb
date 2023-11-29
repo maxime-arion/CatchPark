@@ -1,0 +1,13 @@
+<div class="welcome-container">
+  <div class="car-image-container">
+    <%# <%= image_tag 'car-image.png', alt: "Car Illustration" %>
+  </div>
+  <div class="welcome-content">
+    <h2>Catch park</h2>
+    <p>Cette application rend la recherche de parking rapide et facile.</p>
+    <div class="buttons-container">
+      <%= button_to 'Retour', root_path, method: :get, class: "btn btn-retour" %>
+      <%= link_to 'Suivant', onboarding_step_two_path, method: :get, class: "btn btn-suivant"%>
+    </div>
+  </div>
+</div>

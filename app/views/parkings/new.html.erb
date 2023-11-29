@@ -1,0 +1,16 @@
+<h1>Nouveau Parking</h1>
+
+<%= form_with model: @parking, local: true do |form| %>
+  <%= form.label :longitude %>
+  <%= form.text_field :longitude %>
+
+  <%= form.label :latitude %>
+  <%= form.text_field :latitude %>
+
+  <%= form.label :status %>
+  <%= form.check_box :status %>
+
+  <%= form.submit 'Créer' %>
+<% end %>
+
+<%= link_to 'Retour', parkings_path %>

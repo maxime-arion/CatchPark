@@ -1,0 +1,66 @@
+.onboarding-container {
+  background-color: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  padding-top: 20px;
+
+  .car-image-container {
+    text-align: center;
+  }
+
+  .car-image {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .onboarding-content {
+    padding: 20px;
+    text-align: center;
+
+    .onboarding-icon {
+      color: #FFC107;
+      font-size: 2em;
+    }
+
+    h3 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        width: 45%;
+      }
+
+      .btn-retour {
+        background-color: #6c757d;
+      }
+
+      .btn-suivant {
+        background-color: #007bff;
+      }
+    }
+  }
+}
