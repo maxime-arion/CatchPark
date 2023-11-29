@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users' }
+  devise_for :users
   resources :users, only: [] do
     member do
       patch 'update_vehicle'

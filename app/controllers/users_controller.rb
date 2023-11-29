@@ -25,6 +25,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:vehicle_type, :license_plate, :vehicle_model)
+    params.require(:user).permit(:vehicle_type, :vehicle_plate, :vehicle_name)
   end
 end

@@ -1,8 +1,8 @@
 <!-- app/views/users/new_vehicle.html.erb -->
 <div class="vehicle-registration-container">
   <div class="header">
-    <h2>Hello, <%= current_user.name %></h2>
-    <h1>Easily Park</h1>
+  <h2>Hello, <%= current_user&.username || "Guest" %></h2>
+      <h1>Easily Park</h1>
   </div>
 
   <%= form_with model: current_user, url: vehicle_registration_path, method: :patch, local: true do |form| %>
@@ -17,11 +17,11 @@
     </div>
 
     <div class="form-inputs">
-      <%= form.label :license_plate, 'Plaque d’immatriculation*' %>
-      <%= form.text_field :license_plate, required: true %>
+      <%= form.label :vehicle_plate, 'Plaque d’immatriculation*' %>
+      <%= form.text_field :vehicle_plate, required: true %>
 
-      <%= form.label :vehicle_model, 'Modèle du véhicule*' %>
-      <%= form.text_field :vehicle_model, required: true %>
+      <%= form.label :vehicle_name, 'Modèle du véhicule*' %>
+      <%= form.text_field :vehicle_name, required: true %>
     </div>
 
     <div class="actions">
@@ -29,5 +29,5 @@
     </div>
   <% end %>
 
-  <%= link_to 'Retour', back_path, class: "btn btn-retour" %>
+  <%# <%= link_to 'Retour', back_path, class: "btn btn-retour" %>
 </div>
