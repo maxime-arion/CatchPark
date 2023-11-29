@@ -21,10 +21,16 @@ class ParkingsController < ApplicationController
 
   def create
     @parking = Parking.new(parking_params)
-    if @parking.save
-      redirect_to parking_path(@parking)
-    else
-      render :new, status: :unprocessable_entity
+    respond_to do |format|
+      if @parking.save
+        format.html { redirect_to parking_url(@parking), notice: "Parking was successfully created." }
+        format.json { render :show, status: :created, location: @parking }
+      # redirect_to parking_path(@parking)
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @parking.errors, status: :unprocessable_entity }
+      # render :new, status: :unprocessable_entity
+      end
     end
   end
 
