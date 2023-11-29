@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_11_28_105955) do
+ActiveRecord::Schema[7.1].define(version: 2023_11_29_113059) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,16 +43,16 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_105955) do
   end
 
   create_table "parkings", force: :cascade do |t|
-    t.integer "longitude"
-    t.integer "latitude"
+    t.float "longitude"
+    t.float "latitude"
     t.boolean "price"
     t.boolean "status"
-    t.date "start_time"
-    t.time "end_time"
-    t.time "duration"
-    t.bigint "user_id", null: false
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_parkings_on_user_id"
   end
 
