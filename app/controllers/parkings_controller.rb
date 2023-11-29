@@ -2,7 +2,13 @@ class ParkingsController < ApplicationController
   before_action :set_parking
 
   def index
-    @parkings = Parking.all
+    @parking = Parking.all
+    @markers = @parking.geocoded.map do |parking|
+      {
+        lat: parking.latitude,
+        lng: parking.longitude
+      }
+    end
   end
 
   def show
@@ -39,21 +45,5 @@ class ParkingsController < ApplicationController
   def set_parking
     @parking = Parking.find(params[:id])
   end
-
-  def parking_params
-    params.require(:parking).permit(:name, :location, :occupied)
-  end
-
-  def default_parking_attributes
-    name = params[:name]
-    location = params[:location]
-    # Utilise le service de géocodage pour obtenir les coordonnées
-    coordinates = Geocoder.search(location).first&.coordinates || [0, 0]
-
-    { name: name, location: location, latitude: coordinates[0], longitude: coordinates[1] }
-  end
-
-  def parking_notice_message
-    @parking.occupied ? "Place libérée par #{current_user.id}." : "Place occupée par #{current_user.id}."
   end
 end
