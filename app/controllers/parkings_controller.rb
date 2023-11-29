@@ -2,7 +2,13 @@ class ParkingsController < ApplicationController
   before_action :set_parking, only: [:show, :edit, :update]
 
   def index
-    @parkings = Parking.all
+    @parking = Parking.all
+    @markers = @parking.geocoded.map do |parking|
+      {
+        lat: parking.latitude,
+        lng: parking.longitude
+      }
+    end
   end
 
   def show
@@ -34,7 +40,7 @@ class ParkingsController < ApplicationController
   def set_parking
     @parking = Parking.find(params[:id])
   end
-  
+
   def create
   @parking = Parking.new(parking_params)
     if @parking.save
