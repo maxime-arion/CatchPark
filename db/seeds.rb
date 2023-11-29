@@ -34,122 +34,122 @@ puts 'Finished!'
 # 'status = false' = indisponible
 puts 'Creating parkings...'
 p time = Time.new(2023, 12,8 , 10, 0, 0)
-parking_1 = Parking.new(longitude: -1.5534, latitude: 47.2173, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.35) - time, user: user_4 )
+parking_1 = Parking.new(longitude: -1.5534, latitude: 47.2173, status: true )
 parking_1.save!
 
 p time = Time.new(2023, 12,8 , 7, 15, 0)
-parking_2 = Parking.new(longitude: -1.552201, latitude: 47.212502, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.35) - time, user: user_3)
+parking_2 = Parking.new(longitude: -1.552201, latitude: 47.212502, status: true )
 parking_2.save!
 
 p time = Time.new(2023, 12,8 , 15, 27, 0)
-parking_3 = Parking.new(longitude: -1.551990, latitude: 47.212215, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.35) - time, user: user_5)
+parking_3 = Parking.new(longitude: -1.551990, latitude: 47.212215, status: true )
 parking_3.save!
 
 p time = Time.new(2023, 12,8 , 14, 9, 0)
-parking_4 = Parking.new(longitude: -1.551779, latitude: 47.212028, price: true, status: true, start_time: time, end_time: (time + 60000*0.35), duration: (time + 60000*0.35) - time, user: user_5 )
+parking_4 = Parking.new(longitude: -1.551779, latitude: 47.212028, status: true )
 parking_4.save!
 
 p time = Time.new(2023, 12,8 , 8, 30, 0)
-parking_5 = Parking.new(longitude: -1.551568, latitude: 47.211841, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_4 )
+parking_5 = Parking.new(longitude: -1.551568, latitude: 47.211841, status: true )
 parking_5.save!
 
 p time = Time.new(2023, 12,8 , 10, 44, 0)
-parking_6 = Parking.new(longitude: -1.551357, latitude: 47.211654, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_3 )
+parking_6 = Parking.new(longitude: -1.551357, latitude: 47.211654, status: true )
 parking_6.save!
 
 p time = Time.new(2023, 12,8 , 12, 20, 0)
-parking_7 = Parking.new(longitude: -1.550935, latitude: 47.211280, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25)- time, user: user_2 )
+parking_7 = Parking.new(longitude: -1.550935, latitude: 47.211280, status: true )
 parking_7.save!
 
 p time = Time.new(2023, 12,8 , 14, 0, 0)
-parking_8 = Parking.new(longitude: -1.550724, latitude: 47.211093, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
+parking_8 = Parking.new(longitude: -1.550724, latitude: 47.211093, status: true )
 parking_8.save!
 
 p time = Time.new(2023, 12,8 , 17, 0, 0)
-parking_9 = Parking.new(longitude: -1.550513, latitude: 47.210906, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_2 )
+parking_9 = Parking.new(longitude: -1.550513, latitude: 47.210906, status: true )
 parking_9.save!
 
 p time = Time.new(2023, 12,8 , 18, 0, 0)
-parking_10 = Parking.new(longitude: -1.550302, latitude: 47.210719, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
+parking_10 = Parking.new(longitude: -1.550302, latitude: 47.210719, status: true )
 parking_10.save!
 
 p time = Time.new(2023, 12,8 , 20, 10, 0)
-parking_11 = Parking.new(longitude: -1.550091, latitude: 47.210532, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_3 )
+parking_11 = Parking.new(longitude: -1.550091, latitude: 47.210532, status: true )
 parking_11.save!
 
 p time = Time.new(2023, 12,8 , 23, 0, 0)
-parking_12 = Parking.new(longitude: -1.549880, latitude: 47.210345, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_5 )
+parking_12 = Parking.new(longitude: -1.549880, latitude: 47.210345, status: true )
 parking_12.save!
 
 p time = Time.new(2023, 12,8 , 6, 25, 0)
-parking_13 = Parking.new(longitude: -1.549669, latitude: 47.210158, price: true, status: true, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_4 )
+parking_13 = Parking.new(longitude: -1.549669, latitude: 47.210158, status: true )
 parking_13.save!
 
 p time = Time.new(2023, 12,8 , 11, 0, 0)
-parking_14 = Parking.new(longitude: -1.549458, latitude: 47.209971, price: true, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_3 )
+parking_14 = Parking.new(longitude: -1.549458, latitude: 47.209971, status: true )
 parking_14.save!
 
 p time = Time.new(2023, 12,8 , 15, 10, 0)
-parking_15 = Parking.new(longitude: -1.549247, latitude: 47.209784, price: true, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_5 )
+parking_15 = Parking.new(longitude: -1.549247, latitude: 47.209784, status: true )
 parking_15.save!
 
 p time = Time.new(2023, 12,8 , 16, 35, 0)
-parking_16 = Parking.new(longitude: -1.549036, latitude: 47.209597, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
+parking_16 = Parking.new(longitude: -1.549036, latitude: 47.209597, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_16.save!
 
 p time = Time.new(2023, 12,8 , 17, 5, 0)
-parking_17 = Parking.new(longitude: -1.548825, latitude: 47.209410, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_2 )
+parking_17 = Parking.new(longitude: -1.548825, latitude: 47.209410, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_2 )
 parking_17.save!
 
 p time = Time.new(2023, 12,8 , 9, 0, 0)
-parking_18 = Parking.new(longitude: -1.548614, latitude: 47.209223, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_2 )
+parking_18 = Parking.new(longitude: -1.548614, latitude: 47.209223, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_3 )
 parking_18.save!
 
 p time = Time.new(2023, 12,8 , 9, 30, 0)
-parking_19 = Parking.new(longitude: -1.548403, latitude: 47.209036, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_2 )
+parking_19 = Parking.new(longitude: -1.548403, latitude: 47.209036, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_4 )
 parking_19.save!
 
 p time = Time.new(2023, 12,8 , 10, 0, 0)
-parking_20 = Parking.new(longitude: -1.548192, latitude: 47.208849, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_3 )
+parking_20 = Parking.new(longitude: -1.548192, latitude: 47.208849, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_5 )
 parking_20.save!
 
 p time = Time.new(2023, 12,8 , 13, 45, 0)
-parking_21 = Parking.new(longitude: -1.547981, latitude: 47.208662, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_5 )
+parking_21 = Parking.new(longitude: -1.547981, latitude: 47.208662, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_4 )
 parking_21.save!
 
 p time = Time.new(2023, 12,8 , 18, 0, 0)
-parking_22 = Parking.new(longitude: -1.547770, latitude: 47.208475, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_4 )
+parking_22 = Parking.new(longitude: -1.547770, latitude: 47.208475, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_2 )
 parking_22.save!
 
 p time = Time.new(2023, 12,8 , 15, 0, 0)
-parking_23 = Parking.new(longitude: -1.547559, latitude: 47.208288, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_1 )
+parking_23 = Parking.new(longitude: -1.547559, latitude: 47.208288, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_1 )
 parking_23.save!
 
 p time = Time.new(2023, 12,8 , 8, 10, 0)
-parking_24 = Parking.new(longitude: -1.547348, latitude: 47.208101, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_1 )
+parking_24 = Parking.new(longitude: -1.547348, latitude: 47.208101, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_3 )
 parking_24.save!
 
 p time = Time.new(2023, 12,8 , 12, 15, 0)
-parking_25 = Parking.new(longitude: -1.547137, latitude: 47.207914, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_3 )
+parking_25 = Parking.new(longitude: -1.547137, latitude: 47.207914, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_5 )
 parking_25.save!
 
 p time = Time.new(2023, 12,8 , 7, 25, 0)
-parking_26 = Parking.new(longitude: -1.546926, latitude: 47.207727, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_2 )
+parking_26 = Parking.new(longitude: -1.546926, latitude: 47.207727, status: false, start_time: time, end_time: (time + 60000*0.25), duration:(time + 60000*0.25) - time, user: user_2 )
 parking_26.save!
 
 p time = Time.new(2023, 12,8 , 14, 3, 0)
-parking_27 = Parking.new(longitude: -1.546715, latitude: 47.207540, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_3 )
+parking_27 = Parking.new(longitude: -1.546715, latitude: 47.207540, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_27.save!
 
 p time = Time.new(2023, 12,8 , 10, 22, 0)
-parking_28 = Parking.new(longitude: -1.546504, latitude: 47.207353, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_5 )
+parking_28 = Parking.new(longitude: -1.546504, latitude: 47.207353, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_3 )
 parking_28.save!
 
 p time = Time.new(2023, 12,8 , 19, 38, 0)
-parking_29 = Parking.new(longitude: -1.546293, latitude: 47.207166, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_4 )
+parking_29 = Parking.new(longitude: -1.546293, latitude: 47.207166, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_4 )
 parking_29.save!
 
 p time = Time.new(2023, 12,8 , 21, 0, 0)
-parking_30 = Parking.new(longitude: -1.545678, latitude: 47.214513, price: false, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
+parking_30 = Parking.new(longitude: -1.545678, latitude: 47.214513, status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_5 )
 parking_30.save!
 puts 'Finished!'
