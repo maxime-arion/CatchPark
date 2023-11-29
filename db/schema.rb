@@ -15,13 +15,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_28_105955) do
   enable_extension "plpgsql"
 
   create_table "parkings", force: :cascade do |t|
-    t.integer "longitude"
-    t.integer "latitude"
+    t.float "longitude"
+    t.float "latitude"
     t.boolean "price"
     t.boolean "status"
-    t.date "start_time"
-    t.time "end_time"
-    t.time "duration"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer "duration"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
