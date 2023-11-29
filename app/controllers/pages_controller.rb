@@ -3,8 +3,8 @@ class PagesController < ApplicationController
 
   def home
     @parkings = Parking.all
-    raise
-    @markers = @parkings.geocoded.map do |parking|
+
+    @markers = @parkings.map do |parking|
       {
         lat: parking.latitude,
         lng: parking.longitude
