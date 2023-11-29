@@ -43,13 +43,13 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_29_113059) do
   end
 
   create_table "parkings", force: :cascade do |t|
-    t.float "longitude"
-    t.float "latitude"
+    t.integer "longitude"
+    t.integer "latitude"
     t.boolean "price"
     t.boolean "status"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.integer "duration"
+    t.date "start_time"
+    t.time "end_time"
+    t.time "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
