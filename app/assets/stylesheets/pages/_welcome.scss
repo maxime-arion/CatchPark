@@ -1,0 +1,65 @@
+.welcome-container {
+  background-color: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  .car-image-container {
+    background-color: #e9e9e9;
+    padding: 20px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .welcome-content {
+    padding: 20px;
+    text-align: center;
+
+    h2 {
+      color: #4CAF50; // Adjust the color to match your brand
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-around;
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .btn-retour {
+        background-color: #6c757d; // A greyish color for the 'Retour' button
+      }
+
+      .btn-suivant {
+        background-color: #007bff; // A blue color for the 'Suivant' button
+      }
+    }
+  }
+}
+
+// Add media queries for responsiveness if needed
+@media (max-width: 768px) {
+  .welcome-container {
+    width: 95%;
+  }
+}

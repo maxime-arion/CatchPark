@@ -1,0 +1,32 @@
+<!-- app/views/pages/register_vehicle.html.erb -->
+<div class="vehicle-registration-container">
+  <div class="header">
+  <h1>Easily Park</h1>
+  </div>
+
+  <%= form_with url: register_vehicle_path, method: :post, local: true do |form| %>
+    <div class="vehicle-type-container">
+      <%= form.label :vehicle_type, 'Type de véhicule' %>
+      <%= form.radio_button :vehicle_type, 'car', checked: true %>
+      <%= form.label :vehicle_type_car, 'Voiture' %>
+      <%= form.radio_button :vehicle_type, 'two_wheels' %>
+      <%= form.label :vehicle_type_two_wheels, '2 roues' %>
+      <%= form.radio_button :vehicle_type, 'bus_van' %>
+      <%= form.label :vehicle_type_bus_van, 'Bus/Van' %>
+    </div>
+
+    <div class="form-inputs">
+      <%= form.label :license_plate, 'Plaque d’immatriculation*' %>
+      <%= form.text_field :license_plate, required: true %>
+
+      <%= form.label :vehicle_model, 'Modèle du véhicule*' %>
+      <%= form.text_field :vehicle_model, required: true %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Terminer', class: 'btn-terminer' %>
+    </div>
+  <% end %>
+
+  <%= link_to 'Retour', back_path, class: "btn btn-retour" %>
+</div>

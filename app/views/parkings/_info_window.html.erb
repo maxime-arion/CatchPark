@@ -1,0 +1,10 @@
+<!-- app/views/parkings/_info_window.html.erb -->
+<div>
+  <h4>Parking Info</h4>
+  <p>Longitude: <%= parking.longitude %></p>
+  <p>Latitude: <%= parking.latitude %></p>
+  <p>état <%= parking.status %></p>
+  <p>Début<%= parking.start_time %></p>
+  <p>se termine <%= parking.end_time %></p>
+  <%= link_to 'Voir détails', parking_path(parking) %>
+</div>

@@ -1,15 +1,17 @@
 class ParkingsController < ApplicationController
-  before_action :set_parking
+  before_action :set_parking, except: [:index, :new, :create]
 
   def index
-    @parking = Parking.all
-    @markers = @parking.geocoded.map do |parking|
+    @parkings = Parking.all
+    @markers = @parkings.map do |parking|
       {
         lat: parking.latitude,
-        lng: parking.longitude
+        lng: parking.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { parking: parking })
       }
     end
   end
+
 
   def show
     # Utilisation du before_action pour définir @parking
@@ -45,5 +47,15 @@ class ParkingsController < ApplicationController
   def set_parking
     @parking = Parking.find(params[:id])
   end
+
+  private
+
+def parking_params
+  params.require(:parking).permit(:longitude, :latitude, :price, :status, :start_time, :end_time, :duration, :user_id)
+end
+
+def parking_notice_message
+  "Parking updated successfully."
+end
 
 end
