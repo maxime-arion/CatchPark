@@ -12,7 +12,6 @@ class ParkingsController < ApplicationController
     end
   end
 
-
   def show
     # Utilisation du before_action pour définir @parking
   end
@@ -48,14 +47,12 @@ class ParkingsController < ApplicationController
     @parking = Parking.find(params[:id])
   end
 
-  private
+  def parking_params
+    params.require(:parking).permit(:address, :price, :status, :start_time, :end_time, :duration, :user_id)
+  end
 
-def parking_params
-  params.require(:parking).permit(:longitude, :latitude, :price, :status, :start_time, :end_time, :duration, :user_id)
-end
-
-def parking_notice_message
-  "Parking updated successfully."
-end
+  def parking_notice_message
+    "Parking updated successfully."
+  end
 
 end
