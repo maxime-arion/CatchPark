@@ -1,8 +1,9 @@
 <h1>Détails du Parking</h1>
 
-<p>Longitude: <%= @parking.longitude %></p>
-<p>Latitude: <%= @parking.latitude %></p>
+<p>Adresse: <%= @parking.address %></p>
 <p>Status: <%= @parking.status ? 'Disponible' : 'Non disponible' %></p>
+<p>Durée : <%= (@parking.duration / 60000).to_i %> minutes</p>
+<p>Utilisateur : <%= @parking.user.username %></p>
 
 <%= link_to 'Modifier', edit_parking_path(@parking) %>
 <%= link_to 'Retour à la liste', parkings_path %>

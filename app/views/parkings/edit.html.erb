@@ -1,11 +1,11 @@
 <h1>Modifier Parking</h1>
 
 <%= form_with model: @parking, local: true do |form| %>
-  <%= form.label :longitude %>
-  <%= form.text_field :longitude %>
+  <%= form.label :duration %>
+  <%= form.text_field :duration %>
 
-  <%= form.label :latitude %>
-  <%= form.text_field :latitude %>
+  <%= form.label :address %>
+  <%= form.text_field :address %>
 
   <%= form.label :status %>
   <%= form.check_box :status %>
