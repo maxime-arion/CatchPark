@@ -13,7 +13,6 @@ class ParkingsController < ApplicationController
   end
 
   def show
-    # Utilisation du before_action pour définir @parking
   end
 
   def new

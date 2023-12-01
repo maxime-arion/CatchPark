@@ -1,0 +1,53 @@
+<div class="signup-container">
+  <h2>Sign Up</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "signup-form" }) do |f| %>
+    <% if resource.errors.any? %>
+      <div class="errors">
+        <ul>
+          <% resource.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :username %>
+      <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "signup-input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "signup-input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "signup-input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "signup-input" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up", class: "signup-button" %>
+    </div>
+  <% end %>
+
+  <div class="alternative-login">
+    <%= link_to "Already have an account? Log in", new_user_session_path %>
+    <div class="social-buttons">
+      <%= link_to "#", class: "social-button google" do %>
+        <i class="fab fa-google"></i>
+      <% end %>
+      <%= link_to "#", class: "social-button facebook" do %>
+        <i class="fab fa-facebook-f"></i>
+      <% end %>
+      <%= link_to "#", class: "social-button linkedin" do %>
+        <i class="fab fa-linkedin-in"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
