@@ -1,0 +1,41 @@
+.map-container {
+  position: relative;
+  width: 100%;
+}
+
+#map {
+  height: 100%; /* Ajustez la hauteur selon vos besoins */
+}
+
+.add-parking-button {
+  width: 200px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #5D5FEF;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  z-index:10;
+}
+
+.add-parking-button:hover {
+  background-color: #7F7FFF;
+}
+
+
+/* Responsive styling */
+@media only screen and (max-width: 600px) {
+  .add-parking-button {
+    width: 50%;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+}
