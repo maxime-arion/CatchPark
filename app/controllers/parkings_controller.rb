@@ -29,7 +29,6 @@ class ParkingsController < ApplicationController
   end
 
   def edit
-    # Utilisation du before_action pour définir @parking
   end
 
   def update

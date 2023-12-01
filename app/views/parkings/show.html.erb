@@ -2,8 +2,8 @@
 
 <p>Adresse: <%= @parking.address %></p>
 <p>Status: <%= @parking.status ? 'Disponible' : 'Non disponible' %></p>
-<p>Durée : <%= (@parking.duration / 60000).to_i %> minutes</p>
-<p>Utilisateur : <%= @parking.user.username %></p>
+<p>Durée : <%= @parking.duration ? (@parking.duration / 60000).to_i : 'Non disponible' %> minutes</p>
+<p>Utilisateur : <%= @parking.user ? @parking.user.username : 'Non attribué' %></p>
 
 <%= link_to 'Modifier', edit_parking_path(@parking) %>
 <%= link_to 'Retour à la liste', parkings_path %>
