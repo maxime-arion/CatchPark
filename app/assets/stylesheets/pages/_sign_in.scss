@@ -1,42 +1,57 @@
-.form-title {
-  text-align: center;
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.form-inputs {
-  margin-bottom: 20px;
-}
-
-.form-control {
-  width: 100%;
-  padding: 10px;
+.login-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 10px;
+  background: #fff;
 }
 
-.form-checkbox {
+.login-form .field {
   margin-bottom: 20px;
 }
 
-.form-submit-button {
+.login-input {
   width: 100%;
-  padding: 10px 0;
-  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
 }
 
-/* Adaptations pour les liens */
-a {
-  color: #007bff;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+.login-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
+
+.alternative-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-buttons {
+  margin-top: 20px;
+}
+
+.social-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+}
+
+.social-button.google { background-color: #db4437; }
+.social-button.facebook { background-color: #3b5998; }
+.social-button.linkedin { background-color: #0077b5; }
