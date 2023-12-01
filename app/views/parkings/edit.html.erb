@@ -1,4 +1,4 @@
-<h1>Modifier Parking</h1>
+<h1>Se garer</h1>
 
 <%= form_with model: @parking, local: true do |form| %>
   <%= form.label :duration %>
@@ -10,7 +10,7 @@
   <%= form.label :status %>
   <%= form.check_box :status %>
 
-  <%= form.submit 'Mettre à jour' %>
+  <%= form.submit 'Valider' %>
 <% end %>
 
 <%= link_to 'Retour', parking_path(@parking) %>
