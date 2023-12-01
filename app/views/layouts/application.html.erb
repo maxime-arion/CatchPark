@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+    <%= javascript_include_tag 'custom/home', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
-    
   </head>
 
-  <body><%= render "shared/navbar" %>
+  <body>
+  <%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
 
     <%= yield %>
+    <%= javascript_include_tag 'custom/toggle', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'custom/home', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

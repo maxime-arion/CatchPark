@@ -1,17 +1,27 @@
-<h1>Nouveau Parking</h1>
+<div class="new-parking-container">
+  <h1 class="new-parking-title">Nouveau Parking</h1>
 
-<%= form_with model: @parking, local: true do |form| %>
+  <%= form_with model: @parking, local: true, html: { class: 'new-parking-form' } do |form| %>
 
-  <%= form.label :address %>
-  <%= form.text_field :address %>
+    <div class="form-group">
+      <%= form.label :address, class: 'form-label' %>
+      <%= form.text_field :address, class: 'form-input' %>
+    </div>
 
-  <%= form.label :status %>
-  <%= form.check_box :status %>
+    <div class="form-group">
+      <%= form.label :status, class: 'form-label' %>
+      <%= form.check_box :status, class: 'form-checkbox' %>
+    </div>
 
-  <%= form.label :duration %>
-  <%= form.text_field :duration %>
+    <div class="form-group">
+      <%= form.label :duration, class: 'form-label' %>
+      <%= form.number_field :duration, in: 1..1440, step: 1, class: 'form-input' %>
+    </div>
 
-  <%= form.submit 'Créer' %>
-<% end %>
+    <div class="form-actions">
+      <%= form.submit 'Créer', class: 'submit-button' %>
+      <%= link_to 'Retour', parkings_path, class: 'back-link' %>
+    </div>
 
-<%= link_to 'Retour', parkings_path %>
+  <% end %>
+</div>
