@@ -1,14 +1,18 @@
 <h1>Modifier Parking</h1>
 
 <%= form_with model: @parking, local: true do |form| %>
-  <%= form.label :duration %>
-  <%= form.text_field :duration %>
+  <%= form.label :durée %>
+  <%= form.text_field :durée %>
 
-  <%= form.label :address %>
-  <%= form.text_field :address %>
+  <%= form.label :adresse %>
+  <%= form.text_field :adresse %>
 
-  <%= form.label :status %>
-  <%= form.check_box :status %>
+  <%
+=begin%>
+ <%= form.label :libérer_la_place %>
+  <%= form.check_box :libérer_la_place %>
+<%
+=end%>
 
   <%= form.submit 'Mettre à jour' %>
 <% end %>
