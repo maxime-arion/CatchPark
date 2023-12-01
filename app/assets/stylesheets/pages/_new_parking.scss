@@ -1,0 +1,92 @@
+/* Reset some basic elements */
+.new-parking-container, .new-parking-form, .form-group, .form-actions {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the new parking form */
+.new-parking-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.new-parking-title {
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.new-parking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-label {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.form-input, .form-checkbox {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.form-input:focus, .form-checkbox:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.5);
+}
+
+/* Buttons and links */
+.submit-button, .back-link {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button {
+  background-color: #667eea;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #5a67d8;
+}
+
+.back-link {
+  background-color: transparent;
+  color: #667eea;
+}
+
+.back-link:hover {
+  color: #5a67d8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .new-parking-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
