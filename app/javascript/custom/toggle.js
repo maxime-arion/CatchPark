@@ -1,3 +1,4 @@
+
 const menu = document.querySelector(".menu");
 const menuBtn = document.querySelector(".menu-btn");
 const counters = document.querySelectorAll(".counter")

@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
-    <%= javascript_include_tag 'custom/home', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'custom/home' %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
@@ -21,7 +21,36 @@
 <%= render "shared/flashes" %>
 
     <%= yield %>
-    <%= javascript_include_tag 'custom/toggle', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'custom/home', 'data-turbolinks-track': 'reload' %>
+<script>
+
+const menu = document.querySelector(".menu");
+const menuBtn = document.querySelector(".menu-btn");
+const counters = document.querySelectorAll(".counter")
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("menu-open");
+});
+
+counters.forEach(counter => {
+  counter.innerText = 0;
+
+  let count = 0;
+
+  function updateCount() {
+    const target = parseInt(counter.dataset.count);
+    if(count < target) {
+      count += 10;
+      counter.innerText = count + "+";
+      setTimeout(updateCount, 10); /*Count Speed*/
+    } else {
+      counter.innerText = target + "+";
+    }
+  }
+  updateCount();
+});
+
+</script>
+    <%= javascript_include_tag 'custom/toggle', async: true %>
+    <%= javascript_include_tag 'custom/home', async: true %>
   </body>
 </html>
