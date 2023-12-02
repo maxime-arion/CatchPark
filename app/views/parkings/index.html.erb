@@ -13,6 +13,14 @@
      style="width: 100%; height: 90vh;">
 </div>
 
+<div data-controller="filter">
+  <select data-action="change->filter#apply">
+    <option value="Tous">Tous</option>
+    <option value="Disponible">Disponible</option>
+    <option value="Occupé">Occupé</option>
+  </select>
+</div>
+
 
     <%= link_to 'Me garer', new_parking_path, class: "add-parking-button" %>
   </div>
