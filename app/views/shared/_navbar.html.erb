@@ -1,4 +1,36 @@
-  <nav class="navbar">
+  <section class="header">
+    <div class="container-nav" data-controller="navbar">
+      <nav class="navbar">
+        <%= link_to 'CATCHPARK', root_path, class: 'brand' %>
+        <ul class="menu" data-navbar-target="menu">
+          <li class="btn-list-item">
+            <i class="fas fa-user-circle"></i>
+          </li>
+          <li>
+           <%= link_to 'Accueil', root_path, class: "link-nav" %>
+          </li>
+          <li> <%= link_to 'Carte', parkings_path, class: "link-nav" %></li>
+           <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="buttons">
+          <li class="nav-item"><i class="fas fa-user-circle"></i></li>
+        </div>
+        <button class="menu-btn" data-action="click->navbar#toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+ <!--séparation
     <%= link_to 'CATCHPARK', root_path, class: 'custom-logo-link' %>
         <ul class="menu">
           <li>
@@ -30,3 +62,4 @@
           <i class="fas fa-bars"></i>
         </button>
       </nav>
+-->

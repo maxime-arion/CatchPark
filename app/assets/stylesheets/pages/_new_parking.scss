@@ -1,90 +1,100 @@
-/* Reset some basic elements */
-.new-parking-container, .new-parking-form, .form-group, .form-actions {
-  margin: 0;
-  padding: 0;
+/* Base styles for the glassmorphism effect */
+$new-parking-accent-color: #667eea;
+$new-parking-accent-hover-color: #5a67d8;
+$glass-background: rgba(255, 255, 255, 0.8);
+$glass-border: rgba(255, 255, 255, 0.3);
+$glass-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+
+.new-parking{
+  padding-top: 3%;
 }
-
-
 .new-parking-container {
   max-width: 600px;
   margin: 50px auto;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  background: $glass-background;
   border-radius: 16px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-
-.new-parking-title {
-  font-size: 2.5em;
-  color: #333;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-
-.new-parking-form {
+  box-shadow: $glass-shadow;
+  backdrop-filter: blur(10px);
+  border: 1px solid $glass-border;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-parking-title {
+  font-size: 2.1rem;
+  color: $new-parking-accent-color;
+  // text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.new-parking-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .form-group {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .form-label {
-  font-size: 1.1em;
-  color: #333;
+  font-size: 1.1rem;
+  color: $new-parking-accent-color;
 }
 
 .form-input, .form-checkbox {
-  padding: 10px;
+  padding: 0.625rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1em;
+  border: 2px solid $new-parking-accent-color;
+  font-size: 1rem;
+  background-color: transparent;
 }
 
 .form-input:focus, .form-checkbox:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.5);
+  border-color: $new-parking-accent-hover-color;
+  box-shadow: 0 0 0 2px rgba($new-parking-accent-color, 0.5);
 }
 
 /* Buttons and links */
 .submit-button, .back-link {
-  padding: 10px 15px;
-  border: none;
+  padding: 0.625rem 0.9375rem;
   border-radius: 8px;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1em;
-  cursor: pointer;
+  font-size: 1rem;
   transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
 }
 
 .submit-button {
-  background-color: #667eea;
+  background-color: $new-parking-accent-color;
   color: white;
-}
-
-.submit-button:hover {
-  background-color: #5a67d8;
+  border: none;
+  &:hover {
+    background-color: $new-parking-accent-hover-color;
+  }
 }
 
 .back-link {
+  color: $new-parking-accent-color;
   background-color: transparent;
-  color: #667eea;
-}
-
-.back-link:hover {
-  color: #5a67d8;
+  &:hover {
+    color: $new-parking-accent-hover-color;
+  }
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .new-parking{
+    padding-top: 15%;
+  }
   .new-parking-container {
     width: 90%;
     margin: 20px auto;
