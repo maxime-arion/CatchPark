@@ -1,19 +1,24 @@
 <div class="map-container">
-<div id="map"
-     data-controller="map"
-     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-     data-map-markers-value="<%= @parkings.map do |parking|
-       {
-         lng: parking.longitude,
-         lat: parking.latitude,
-         status: parking.status,
-         infoWindow: render(partial: "info_window", locals: { parking: parking })
-       }
-     end.to_json %>"
-     style="width: 100%; height: 90vh;">
-</div>
-
-
-    <%= link_to 'Me garer', new_parking_path, class: "add-parking-button" %>
+    <div id="map" data-controller="map"
+         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+         data-map-markers-value="<%= @parkings.map do |parking|
+           {
+             lng: parking.longitude,
+             lat: parking.latitude,
+             status: parking.status,
+             infoWindow: render(partial: "info_window", locals: { parking: parking })
+           }
+         end.to_json %>"
+         style="width: 100%; height: 100vh;">
+    </div>
+       <div class="button-container">
+          <div class="button" data-controller="filter">
+        <select data-action="change->filter#apply">
+            <option value="Tous">Tous</option>
+            <option value="Disponible">Disponible</option>
+            <option value="Occupé">Occupé</option>
+        </select>
+    </div>
+    <%= link_to 'Me garer', new_parking_path, class: "button" %>
   </div>
 </div>
