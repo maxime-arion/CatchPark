@@ -11,19 +11,23 @@ export default class extends Controller {
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue;
-    // Ne pas géolocaliser automatiquement pour laisser l'utilisateur choisir
   }
 
-  // Action pour le bouton
-  geolocateUser() {
+  fillAddress() {
+    // Afficher un message de chargement
+    this.addressTarget.value = "Localisation en cours...";
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         position => this.reverseGeocode(position.coords),
-        error => console.error("Geolocation Error: ", error),
+        error => {
+          console.error("Geolocation Error: ", error);
+          this.addressTarget.value = ""; // Réinitialiser le message
+        },
         { enableHighAccuracy: true }
       );
     } else {
       console.error("Geolocation is not supported by this browser.");
+      this.addressTarget.value = ""; // Réinitialiser le message
     }
   }
 
@@ -38,8 +42,12 @@ export default class extends Controller {
           this.addressTarget.value = place;
         } else {
           console.error("No address found for this location.");
+          this.addressTarget.value = "";
         }
       })
-      .catch(error => console.error("Reverse Geocoding Error: ", error));
+      .catch(error => {
+        console.error("Reverse Geocoding Error: ", error);
+        this.addressTarget.value = "";
+      });
   }
 }

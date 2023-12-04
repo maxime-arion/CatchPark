@@ -13,6 +13,7 @@ class ParkingsController < ApplicationController
   end
 
   def show
+    @parking = Parking.find(params[:id])
   end
 
   def new
@@ -21,8 +22,12 @@ class ParkingsController < ApplicationController
 
   def create
     @parking = Parking.new(parking_params)
+    @parking.status = false # La place est initialement occupée
+    @parking.start_time = Time.current # Définit le start_time sur l'heure actuelle
+    @parking.end_time = @parking.start_time + @parking.duration.hours # Ajoute la durée au start_time pour obtenir end_time
+
     if @parking.save
-      redirect_to parking_path(@parking)
+      redirect_to parking_path(@parking), notice: 'Emplacement créé et marqué comme indisponible.'
     else
       render :new, status: :unprocessable_entity
     end

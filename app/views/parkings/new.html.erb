@@ -1,7 +1,6 @@
 <!-- app/views/parkings/new.html.erb -->
 
-<div data-controller="geolocation"
-     data-geolocation-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+<div data-controller="geolocation" data-geolocation-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   <div class="new-parking">
     <div class="new-parking-container">
       <h1 class="new-parking-title">Enregistrer mon<br><span class="emplacement">Emplacement</span></h1>
@@ -10,17 +9,15 @@
         <div class="form-group">
           <%= form.label :address, 'Address', class: 'form-label' %>
           <%= form.text_field :address, class: 'form-input', data: { geolocation_target: "address" } %>
-          <!-- Bouton pour déclencher la géolocalisation -->
-          <button type="button"
-                  data-action="geolocation#geolocateUser">
-            Utiliser ma position actuelle
+          <button type="button" data-action="click->geolocation#fillAddress" class="fill-address-button">
+            Utiliser ma position
           </button>
         </div>
 
-        <div class="form-group">
-          <%= form.label :duration, 'Duration', class: 'form-label' %>
-          <%= form.number_field :duration, in: 1..1440, step: 1, class: 'form-input' %>
-        </div>
+          <div class="form-group">
+            <%= form.label :duration, 'Durée de Stationnement (en heures)', class: 'form-label' %>
+            <%= form.number_field :duration, in: 1..24, step: 1, class: 'form-input' %>
+          </div>
 
         <div class="form-actions">
           <%= form.submit 'Créer', class: 'submit-button' %>

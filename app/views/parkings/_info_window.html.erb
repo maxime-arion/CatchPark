@@ -1,18 +1,14 @@
 <div class="parking-card">
   <div class="parking-card-content">
-    <h4 class="parking-card-title"><strong>Parking Info</h4>
+    <h4 class="parking-card-title"><strong>Parking Info</strong></h4> <!-- Corrected missing closing tag -->
     <p class="parking-card-detail">Adresse : <span><%= parking.address %></span></p>
     <p class="parking-card-detail">État : <span><%= parking.status ? 'Disponible' : 'Non disponible' %></span></p>
     <p class="parking-card-detail">
-  Se libère dans :
-  <span>
-    <% if parking.start_time && parking.end_time %>
-      <%= ((parking.end_time - parking.start_time) / 60).to_i %> minutes
-    <% else %>
-      N/A
-    <% end %>
-  </span>
-</p>
+      <div data-controller="countdown"
+           data-countdown-end-time-value="<%= parking.end_time.to_i %>">
+        Se libère dans : <span data-target="countdown.output"></span>
+      </div>
+    </p>
     <%= link_to 'Voir détails', parking_path(parking), class: "parking-card-link" %>
   </div>
 </div>
