@@ -6,8 +6,8 @@
         <div class="event-year">2023</div>
         <!-- <div class="event-name">catchpark</div> -->
         <div class="buttons">
-            <button class="start">Start</button>
-            <button class="signup">Sign up</button>
+         <%= link_to 'Start', new_user_registration_path, class: "start" %>
+        <%= link_to 'Sign up', new_user_session_path, class: "signup" %>
         </div>
     </header>
 </div>

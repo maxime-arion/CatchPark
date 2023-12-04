@@ -1,0 +1,18 @@
+#geolocate-container {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  z-index: 1;
+}
+.mapboxgl-user-location-accuracy-circle {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+#geolocate-container {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  z-index: 1;
+}
+}

@@ -1,102 +1,97 @@
-/* Base styles for the glassmorphism effect */
-$new-parking-accent-color: #667eea;
-$new-parking-accent-hover-color: #5a67d8;
-$glass-background: rgba(255, 255, 255, 0.8);
-$glass-border: rgba(255, 255, 255, 0.3);
-$glass-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-
+.new-parking-container, .new-parking-form, .form-group, .form-actions {
+  margin: 0;
+  padding: 0;
+}
 .new-parking{
-  padding-top: 3%;
+  padding-top:3%;
 }
 .new-parking-container {
   max-width: 600px;
   margin: 50px auto;
-  padding: 2rem;
-  background: $glass-background;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 16px;
-  box-shadow: $glass-shadow;
-  backdrop-filter: blur(10px);
-  border: 1px solid $glass-border;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
-
 .new-parking-title {
-  font-size: 2.1rem;
-  color: $new-parking-accent-color;
-  // text-align: center;
-  margin-bottom: 1.5rem;
+  font-size: 2.1em;
+  font-weight:bold;
+  color: #33333369;
+  margin-bottom: 30px;
 }
-
+.emplacement{
+  font-weight:bold;
+  color: #333;
+}
 .new-parking-form {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 20px;
 }
 
 .form-group {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: 10px;
 }
 
 .form-label {
-  font-size: 1.1rem;
-  color: $new-parking-accent-color;
+  font-size: 1.1em;
+  color: #333;
 }
 
 .form-input, .form-checkbox {
-  padding: 0.625rem;
-  border-radius: 8px;
-  border: 2px solid $new-parking-accent-color;
-  font-size: 1rem;
-  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1em;
 }
 
 .form-input:focus, .form-checkbox:focus {
   outline: none;
-  border-color: $new-parking-accent-hover-color;
-  box-shadow: 0 0 0 2px rgba($new-parking-accent-color, 0.5);
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.5);
 }
 
 /* Buttons and links */
 .submit-button, .back-link {
-  padding: 0.625rem 0.9375rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  text-align: center;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 50px;
   text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .submit-button {
-  background-color: $new-parking-accent-color;
-  color: white;
-  border: none;
-  &:hover {
-    background-color: $new-parking-accent-hover-color;
-  }
+  background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+
+.submit-button:hover {
+  background-color: #5a67d8;
 }
 
 .back-link {
-  color: $new-parking-accent-color;
   background-color: transparent;
-  &:hover {
-    color: $new-parking-accent-hover-color;
-  }
+  color: black;
+}
+
+.back-link:hover {
+  color: #5a67d8;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .new-parking{
-    padding-top: 15%;
-  }
   .new-parking-container {
     width: 90%;
     margin: 20px auto;
+  }
+  .new-parking{
+    padding-top:13%;
   }
 }
