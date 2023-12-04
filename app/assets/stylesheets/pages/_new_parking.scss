@@ -55,6 +55,7 @@
 
 /* Buttons and links */
 .submit-button, .back-link {
+  margin-top:1em;
   padding: 8px 22px;
   border: none;
   border-radius: 50px;
@@ -83,6 +84,20 @@
 
 .back-link:hover {
   color: #5a67d8;
+}
+
+.fill-address-button {
+  margin-top: 5px; /* Ajustez selon vos besoins */
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fill-address-button:hover {
+  background-color: #e0e0e0;
 }
 
 /* Responsive design */

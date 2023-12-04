@@ -1,56 +1,79 @@
-class ParkingsController < ApplicationController
-  before_action :set_parking, except: [:index, :new, :create]
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
+# be faster and is potentially less error prone than running all of your
+# migrations from scratch. Old migrations may fail to apply correctly if those
+# migrations use external dependencies or application code.
+#
+# It's strongly recommended that you check this file into your version control system.
 
-  def index
-    @parkings = Parking.all
-    @markers = @parkings.map do |parking|
-      {
-        lat: parking.latitude,
-        lng: parking.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { parking: parking })
-      }
-    end
+ActiveRecord::Schema[7.1].define(version: 2023_11_30_135933) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  def show
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.string "service_name", null: false
+    t.bigint "byte_size", null: false
+    t.string "checksum"
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  def new
-    @parking = Parking.new
+  create_table "active_storage_variant_records", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  def create
-    @parking = Parking.new(parking_params)
-    if @parking.save
-      redirect_to parking_path(@parking)
-    else
-      render :new, status: :unprocessable_entity
-    end
+  create_table "parkings", force: :cascade do |t|
+    t.float "longitude"
+    t.float "latitude"
+    t.boolean "price"
+    t.boolean "status"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.string "address"
+    t.index ["user_id"], name: "index_parkings_on_user_id"
   end
 
-  def edit
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "vehicle_name"
+    t.string "vehicle_type"
+    t.string "vehicle_plate"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  def update
-    if @parking.update(parking_params)
-      redirect_to @parking, notice: parking_notice_message
-    else
-      render :edit
-    end
-  end
-
-  private
-
-  def set_parking
-    @parking = Parking.find(params[:id])
-  end
-
-  def parking_params
-    params.require(:parking).permit(:address, :price, :status, :start_time, :end_time, :duration, :user_id)
-  end
-
-  def parking_notice_message
-    "Parking updated successfully."
-  end
-
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "parkings", "users"
 end

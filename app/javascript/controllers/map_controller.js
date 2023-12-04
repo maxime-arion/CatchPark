@@ -8,7 +8,7 @@ export default class extends Controller {
   }
 
   markersOnMap = [];
-  userLocationMarker = null;
+  // userLocationMarker = null; //j'ai Commenté pour désactiver le marqueur personnalisé, décommenter pour remmettre marker rouge type google sur géoloc
 
   connect() {
     mapboxgl.accessToken = this.apiKeyValue;
@@ -49,6 +49,20 @@ export default class extends Controller {
     const bounds = new mapboxgl.LngLatBounds();
     this.markersOnMap.forEach(marker => bounds.extend(marker.getLngLat()));
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
+  }
+
+  filterMarkers(statusFilter) {
+    this.markersOnMap.forEach((marker, index) => {
+      const markerElement = marker.getElement();
+      const markerData = this.markersValue[index];
+      if (statusFilter === 'Tous') {
+        markerElement.style.display = 'block';
+      } else if ((statusFilter === 'Disponible' && markerData.status) || (statusFilter === 'Occupé' && !markerData.status)) {
+        markerElement.style.display = 'block';
+      } else {
+        markerElement.style.display = 'none';
+      }
+    });
   }
 
   getColorBasedOnStatus(status) {
@@ -103,13 +117,15 @@ export default class extends Controller {
   }
 
   updateUserLocationMarker(latitude, longitude) {
-    if (!this.userLocationMarker) {
-      this.userLocationMarker = new mapboxgl.Marker({ color: 'red' })
-        .setLngLat([longitude, latitude])
-        .addTo(this.map);
-    } else {
-      this.userLocationMarker.setLngLat([longitude, latitude]);
-    }
+    // Méthode commentée pour désactiver le marqueur personnalisé, décommenter pour remmettre marker rouge type google sur géoloc
+
+    // if (!this.userLocationMarker) {
+    //   this.userLocationMarker = new mapboxgl.Marker({ color: 'red' })
+    //     .setLngLat([longitude, latitude])
+    //     .addTo(this.map);
+    // } else {
+    //   this.userLocationMarker.setLngLat([longitude, latitude]);
+    // }
 
     this.map.flyTo({ center: [longitude, latitude], zoom: 15 });
   }

@@ -6,8 +6,7 @@
              lng: parking.longitude,
              lat: parking.latitude,
              status: parking.status,
-             infoWindow: render(partial: "info_window", locals: { parking: parking })
-           }
+            infoWindow: render(partial: "info_window", locals: { parking: parking }).to_s           }
          end.to_json %>"
          style="width: 100%; height: 100vh;">
          <div id="geolocate-container"></div>
