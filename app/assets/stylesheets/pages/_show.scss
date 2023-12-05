@@ -1,0 +1,27 @@
+  .show-container {
+    padding-top: 4%; /* Ajustez cette valeur selon vos besoins pour éviter le chevauchement avec la barre de navigation */
+    margin-top: 80px; /* Ajoutez une marge pour déplacer le bloc en dessous de la barre de navigation */
+    position: relative;
+    top: 0px;
+    left: 0px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column; /* Mettez le contenu en colonne pour afficher les informations sous les sous-titres */
+    align-items: center;
+    width: 100%;
+    padding: 0 1em;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+    h1 {
+      font-size: 24px; /* Taille de police plus petite pour les petits écrans */
+      /* Ajoutez d'autres styles spécifiques pour h1 ici */
+    }
+
+    p {
+      font-size: 16px; /* Taille de police plus petite pour les petits écrans */
+      margin-bottom: 8px; /* Ajoutez une marge en bas pour l'espace entre les éléments */
+    }
+  }

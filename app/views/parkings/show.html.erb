@@ -1,9 +1,26 @@
-<h1>Détails du Parking</h1>
-
-<p>Adresse: <%= @parking.address %></p>
-<p>Status: <%= @parking.status ? 'Disponible' : 'Non disponible' %></p>
-<p>Durée : <%= @parking.duration ? (@parking.duration / 60000).to_i : 'N/A' %> minutes</p>
-<p>Durée : <%= @parking.duration ? (@parking.duration / 60000).to_i : 'Non disponible' %> minutes</p>
-
-<%= link_to 'Modifier', edit_parking_path(@parking) %>
-<%= link_to 'Retour à la liste', parkings_path %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Ajoutez vos styles CSS ici */
+    .show-container-detail {
+      font-size: 16px; /* Taille de police initiale */
+      text-decoration: underline; /* Souligner le texte */
+      display: inline-block;
+      margin-bottom: 8px; /* Ajoutez une marge en bas pour l'espacement */
+    }
+  </style>
+</head>
+<body>
+  <div class="show-container">
+    <div class="show-container-content">
+      <h1 class="show-container-title"><strong>Détails du Parking :</strong></h1>
+      <p class="show-container-detail">Adresse : <%= @parking.address %></p>
+      <p class="show-container-detail">Status : <%= @parking.status ? 'Disponible' : 'Non disponible' %></p>
+      <p class="show-container-detail">Durée : <%= @parking.duration ? (@parking.duration / 60000).to_i : 'N/A' %> minutes</p>
+      <a href="<%= edit_parking_path(@parking) %>">Modifier</a>
+      <a href="<%= parkings_path %>">Retour à la liste</a>
+    </div>
+  </div>
+</body>
+</html>
