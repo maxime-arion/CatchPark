@@ -1,13 +1,12 @@
 <div class="container">
     <header>
-        <h1 class="title">CatchPark</h1>
-        <p class="subtitle"><br> Stationner malin ! </p>
+        <h1 class="title">Stationner malin ! </h1>
+        <h2 class="subtitle"><br> L'application qui va revolutionner votre facon de stationner.</h2>
         <!-- <p class="offer">Parking Intelligent pour Tous</p> -->
-        <div class="event-year"><br></div>
+        <div class="event-year"><br><%= link_to 'Sign up', new_user_registration_path, class: "start" %><br>
+        <br><%= link_to 'Log in', new_user_session_path, class: "signup" %></div>
         <!-- <div class="event-name">catchpark</div> -->
-        <div class="buttons">
-        <%= link_to 'Sign up', new_user_registration_path, class: "start" %>
-        <%= link_to 'Sign in', new_user_session_path, class: "signup" %>
+        <div class="buttons"><br>
         </div>
     </header>
 </div>

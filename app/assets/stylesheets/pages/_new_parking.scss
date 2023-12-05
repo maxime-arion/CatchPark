@@ -50,7 +50,7 @@
 .form-input:focus, .form-checkbox:focus {
   outline: none;
   border-color: #7aa98d;
-  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 0 2px (0, 0, 0, 0.5);
 }
 
 /* Buttons and links */
