@@ -1,21 +1,30 @@
-<h1>Modifier Parking</h1>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="styleguide.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mon_stationnement.css" />
+</head>
 
-<%= form_with model: @parking, local: true do |form| %>
-  <%= form.label :durée %>
-  <%= form.text_field :durée %>
+<body>
+  <h1><br><br><br>Modifier Parking</h1>
 
-  <%= form.label :adresse %>
-  <%= form.text_field :adresse %>
+  <%= form_with model: @parking, local: true do |form| %>
+    <%= form.label :durée %>
+    <%= form.text_field :durée %>
 
-  <%
-=begin%>
- <%= form.label :libérer_la_place %>
-  <%= form.check_box :libérer_la_place %>
-<%
-=end%>
+    <%= form.label :adresse %>
+    <%= form.text_field :adresse %>
 
-  <%= form.submit 'Mettre à jour' %>
-<% end %>
+    <%= form.label :status %>
+    <%= form.check_box :status %>
 
-<%= link_to 'Retour', parking_path(@parking) %>
+    <%= form.submit 'Mettre à jour' %>
+
+    <%= link_to 'Retour', parking_path(@parking) %>
+  <% end %>
+
+</html>
