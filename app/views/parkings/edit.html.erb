@@ -22,9 +22,12 @@
     <%= form.label :status %>
     <%= form.check_box :status %>
 
+    <%= javascript_include_tag 'application' %>
+
     <%= form.submit 'Mettre à jour' %>
 
     <%= link_to 'Retour', parking_path(@parking) %>
   <% end %>
+</body>
 
 </html>
