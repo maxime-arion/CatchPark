@@ -1,7 +1,6 @@
 body, html {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  color: black;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .container {
@@ -13,15 +12,20 @@ body, html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .title {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .subtitle, .time, .offer, .address p, .event-year, .event-name {
   margin: 0px 0;
+  color: #7aa98d;
+  text-align: center;
+
 }
 
 .time, .offer {
@@ -39,27 +43,39 @@ body, html {
   gap: 5px;
 }
 
-.start, .signup {
+.start {
   border: none;
-  padding: 8px 24px;
-  color: white;
-  background: black;
-  border: 1px solid black;
+  padding: 10px 20px;
+  background-color: #7aa98d;
+  border: 1px solid #7aa98d;
   font-size: 18px;
-  border-radius: 50px;
+  border-radius: 28px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .signup {
   border: none;
   padding: 10px 20px;
-  color: black;
-  background: transparent;
-  border: 1px solid black;
+  background-color: #7aa98d;
+  border: 1px solid #7aa98d;
   font-size: 18px;
+  border-radius: 28px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+.start:hover {
+  color: #7aa98d;
+  background: #d9e8e2;
+}
+.signup:hover {
+  color: #7aa98d;
+  background: #d9e8e2;
+}
+
 @media (min-width: 768px) {
   .container {
       padding: 12% 50px;
       height: auto;
+
   }
 
   .title {
@@ -87,7 +103,7 @@ body, html {
   }
 
   .buttons {
-      position: relative;
+    position: relative;
   }
 
   .start, .signup {
