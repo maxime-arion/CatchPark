@@ -12,12 +12,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mon_stationnement.css" />
+
+  <!-- Inclure les fichiers JavaScript -->
+  <%= javascript_include_tag 'application' %>
     <%= render 'shared/ios_pwa_links' %>
   </head>
 
   <body>
 <%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
+<%= render "shared/mon_stationnement" %>
 
     <%= yield %>
 

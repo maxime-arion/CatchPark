@@ -67,20 +67,26 @@ export default class extends Controller {
 
   getColorBasedOnStatus(status) {
     if (status === true) {
-      return '#008000'; // Vert pour disponible
+      return '#7aa98d'; // Vert pour disponible
     } else if (status === false) {
-      return '#FFA500'; // Orange pour non disponible
+      return '#f4405a'; // Orange pour non disponible
     } else {
       return 'grey';
     }
   }
 
+  // createSvgMarker(fillColor) {
+  //   return `<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  //             <path d="M12 2L15.5 8.5H8.5L12 2Z" fill="${fillColor}"/>
+  //             <path d="M12 22L8.5 15.5H15.5L12 22Z" fill="${fillColor}"/>
+  //             <path d="M2 12L8.5 8.5V15.5L2 12Z" fill="${fillColor}"/>
+  //             <path d="M22 12L15.5 15.5V8.5L22 12Z" fill="${fillColor}"/>
+  //           </svg>`;
+  // }
+
   createSvgMarker(fillColor) {
-    return `<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L15.5 8.5H8.5L12 2Z" fill="${fillColor}"/>
-              <path d="M12 22L8.5 15.5H15.5L12 22Z" fill="${fillColor}"/>
-              <path d="M2 12L8.5 8.5V15.5L2 12Z" fill="${fillColor}"/>
-              <path d="M22 12L15.5 15.5V8.5L22 12Z" fill="${fillColor}"/>
+    return `<svg fill="${fillColor}" width="24px" height="24px" viewBox="-3 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m8.075 23.52c-6.811-9.878-8.075-10.891-8.075-14.52 0-4.971 4.029-9 9-9s9 4.029 9 9c0 3.629-1.264 4.64-8.075 14.516-.206.294-.543.484-.925.484s-.719-.19-.922-.48l-.002-.004zm.925-10.77c2.07 0 3.749-1.679 3.749-3.75s-1.679-3.75-3.75-3.75-3.75 1.679-3.75 3.75c0 2.071 1.679 3.75 3.75 3.75z"/>
             </svg>`;
   }
 

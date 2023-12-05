@@ -2,7 +2,6 @@
 
 <p>Adresse: <%= @parking.address %></p>
 <p>Status: <%= @parking.status ? 'Disponible' : 'Non disponible' %></p>
-<p>Durée : <%= @parking.duration ? (@parking.duration / 60000).to_i : 'N/A' %> minutes</p>
 <p>Durée : <%= @parking.duration ? (@parking.duration / 60000).to_i : 'Non disponible' %> minutes</p>
 
 <%= link_to 'Modifier', edit_parking_path(@parking) %>

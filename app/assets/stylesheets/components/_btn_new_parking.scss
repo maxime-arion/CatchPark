@@ -25,23 +25,24 @@
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-   color: black;
+  color: black;
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
   width: 120px;
 }
 
- select {
+  select {
   -webkit-appearance: none;
   -moz-appearance: none;
+  appearance: none;
   background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
 }
 
- select {
+  select {
   background-repeat: no-repeat;
   background-position: right 10px top 50%;
   padding-right: 30px;
