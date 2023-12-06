@@ -18,16 +18,18 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mon_stationnement.css" />
 
-  <!-- Inclure les fichiers JavaScript -->
-  <%= javascript_include_tag 'application' %>
+    <!-- Inclure les fichiers JavaScript -->
+    <%= javascript_include_tag 'application' %>
     <%= render 'shared/ios_pwa_links' %>
   </head>
 
   <body>
-<%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
+    <% if controller.controller_name == 'parkings' && controller.action_name == 'edit' %>
+      <%= render "shared/mon_stationnement" %>
+    <% end %>
 
     <%= yield %>
-
   </body>
 </html>

@@ -1,35 +1,19 @@
-// External libraries
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,600");
-@import "bootstrap";
-@import "font-awesome";
-
-// Graphical variables
-@import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
-
-// Your CSS partials
-@import "components/index";
-@import "pages/index";
-
-// Styles globaux
 * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
-html, body {
-  margin: 0;
+html,
+body {
+  margin: 0px;
   height: 100%;
 }
-
-/* Style générique pour la mise au point */
+/* a blue color as a generic focus style */
 button:focus-visible {
   outline: 2px solid #4a90e2 !important;
   outline: -webkit-focus-ring-color auto 5px !important;
 }
-
 a {
   text-decoration: none;
 }
