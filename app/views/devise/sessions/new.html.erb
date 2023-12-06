@@ -18,17 +18,17 @@
     </div>
   <% end %>
 
-   <div class="alternative-login">
-    <%= link_to "Don't have an account? sign up", new_user_registration_path %>
+  <div class="alternative-login">
+    <%= link_to "Already have an account? Log in", new_user_session_path %>
     <div class="social-buttons">
-      <%= button_to "#", class: "social-button google", method: :get do %>
-        <i class="fa-brands fa-google"></i>
+      <%= link_to "#", class: "social-button google" do %>
+        <i class="fab fa-google"></i>
       <% end %>
-      <%= button_to "#", class: "social-button facebook", method: :get do %>
-        <i class="fa-brands fa-facebook-f"></i>
+      <%= link_to "#", class: "social-button facebook" do %>
+        <i class="fab fa-facebook-f"></i>
       <% end %>
-      <%= button_to "#", class: "social-button linkedin", method: :get do %>
-        <i class="fa-brands fa-linkedin-in"></i>
+      <%= link_to "#", class: "social-button linkedin" do %>
+        <i class="fab fa-linkedin-in"></i>
       <% end %>
     </div>
   </div>
