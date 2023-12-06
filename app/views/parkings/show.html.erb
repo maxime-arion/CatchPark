@@ -1,5 +1,29 @@
-<h1><br><br><br>Détails du Parking</h1>
-<p>Adresse: <%= @parking.address %></p>
-<p>Status: <%= @parking.status ? 'Disponible' : 'Non disponible' %></p>
-<%= link_to 'Modifier', edit_parking_path(@parking) %>
-<%= link_to 'Retour à la liste', parkings_path %>
+<!-- show.html.erb pour le contrôleur Parkings -->
+<div class="parking-details">
+  <h1>Détails du Stationnement</h1>
+  <form action="<%= parking_path(@parking) %>" method="post">
+    <!-- Utilisez la balise "fieldset" pour grouper les éléments de formulaire liés -->
+    <fieldset>
+      <label for="address"><br>Adresse :</label>
+      <p id="address"><%= @parking.address %></p>
+    </fieldset>
+
+    <fieldset>
+      <label for="duration">Durée du stationnement :</label>
+      <p id="duration"><%= @parking.duration %> minutes</p>
+    </fieldset>
+
+    <fieldset>
+      <label for="status">Statut :</label>
+      <p id="status"><%= @parking.status ? 'Disponible' : 'Non disponible' %></p>
+    </fieldset>
+
+    <!-- Ajoutez des champs supplémentaires ici si nécessaire -->
+
+    <!-- Boutons d'action -->
+    <div class="form-actions">
+      <%= link_to 'Modifier infos parking', edit_parking_path(@parking), class: 'button' %>
+      <%= link_to 'Retour à la carte', parkings_path, class: 'button' %>
+    </div>
+  </form>
+</div>
