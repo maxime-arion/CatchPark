@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mon_stationnement.css" />
+    <link rel="stylesheet" href="show_page.css" />
 
     <!-- Inclure les fichiers JavaScript -->
     <%= javascript_include_tag 'application' %>
@@ -26,9 +26,6 @@
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-    <% if controller.controller_name == 'parkings' && controller.action_name == 'edit' %>
-      <%= render "shared/mon_stationnement" %>
-    <% end %>
 
     <%= yield %>
   </body>

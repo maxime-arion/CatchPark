@@ -38,15 +38,15 @@
   line-height: normal;
 }
 
-// .mon-stationnement .progress {
-//   position: absolute;
-//   width: 212px;
-//   height: 219px;
-//   top: 205px;
-//   left: 84px;
-//   background-image: url(https://c.animaapp.com/Uo5RzBKg/img/ellipse-3.svg);
-//   background-size: 100% 100%;
-// }
+.mon-stationnement .progress {
+  position: absolute;
+  width: 212px;
+  height: 219px;
+  top: 205px;
+  left: 84px;
+  background-image: url(https://c.animaapp.com/Uo5RzBKg/img/ellipse-3.svg);
+  background-size: 100% 100%;
+}
 
 .mon-stationnement .overlap-group {
   position: relative;
@@ -95,7 +95,7 @@
   letter-spacing: 0;
   line-height: normal;
 }
-
+// affiche la carte
 .mon-stationnement .zone {
   position: absolute;
   width: 300px;
@@ -240,21 +240,21 @@
   background-color: transparent;
 }
 
-// .mon-stationnement .logo {
-//   display: inline-flex;
-//   flex-direction: column;
-//   height: 54.25px;
-//   align-items: center;
-//   justify-content: space-between;
-//   position: relative;
-//   flex: 0 0 auto;
-// }
+.mon-stationnement .logo {
+  display: inline-flex;
+  flex-direction: column;
+  height: 54.25px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex: 0 0 auto;
+}
 
-// .mon-stationnement .img {
-//   position: relative;
-//   width: 40px;
-//   height: 40px;
-// }
+.mon-stationnement .img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
 
 .mon-stationnement .text-wrapper-4 {
   position: relative;

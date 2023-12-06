@@ -1,11 +1,11 @@
 <div class="parking-card">
   <div class="parking-card-content">
     <h4 class="parking-card-title"><strong>Parking Info</strong></h4> <!-- Corrected missing closing tag -->
-    <p class="parking-card-detail">Adresse : <span><%= parking.address %></span></p>
-    <p class="parking-card-detail">État : <span><%= parking.status ? 'Disponible' : 'Non disponible' %></span></p>
+    <p class="parking-card-detail"><span><%= parking.address %></span></p>
+    <p class="parking-card-detail"><span><%= parking.status ? 'Disponible' : 'Non disponible' %></span></p>
     <p class="parking-card-detail">
       <div data-controller="countdown"
-           data-countdown-end-time-value="<%= parking.end_time.to_i %>">
+      data-countdown-end-time-value="<%= parking.end_time.to_i %>">
         Se libère dans : <span data-target="countdown.output"></span>
       </div>
     </p>
