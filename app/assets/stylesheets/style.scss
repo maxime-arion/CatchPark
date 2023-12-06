@@ -38,15 +38,15 @@
   line-height: normal;
 }
 
-// .mon-stationnement .progress {
-//   position: absolute;
-//   width: 212px;
-//   height: 219px;
-//   top: 205px;
-//   left: 84px;
-//   background-image: url(https://c.animaapp.com/Uo5RzBKg/img/ellipse-3.svg);
-//   background-size: 100% 100%;
-// }
+.mon-stationnement .progress {
+  position: absolute;
+  width: 212px;
+  height: 219px;
+  top: 205px;
+  left: 84px;
+  background-image: url(https://c.animaapp.com/Uo5RzBKg/img/ellipse-3.svg);
+  background-size: 100% 100%;
+}
 
 .mon-stationnement .overlap-group {
   position: relative;
@@ -197,7 +197,7 @@
   position: absolute;
   top: 0;
   left: 14px;
-  box-shadow: 0px 4px 4px #ae232340;
+  box-shadow: 0px 4px 4px #00000040;
   all: unset;
   box-sizing: border-box;
 }
@@ -211,7 +211,7 @@
   gap: 10px;
   padding: 22px 67px;
   position: relative;
-  background-color: #7aa98d;
+  background-color: #fbe66b;
   border-radius: 19px;
 }
 
@@ -240,21 +240,21 @@
   background-color: transparent;
 }
 
-// .mon-stationnement .logo {
-//   display: inline-flex;
-//   flex-direction: column;
-//   height: 54.25px;
-//   align-items: center;
-//   justify-content: space-between;
-//   position: relative;
-//   flex: 0 0 auto;
-// }
+.mon-stationnement .logo {
+  display: inline-flex;
+  flex-direction: column;
+  height: 54.25px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex: 0 0 auto;
+}
 
-// .mon-stationnement .img {
-//   position: relative;
-//   width: 40px;
-//   height: 40px;
-// }
+.mon-stationnement .img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
 
 .mon-stationnement .text-wrapper-4 {
   position: relative;
@@ -270,11 +270,11 @@
   line-height: normal;
 }
 
-// .mon-stationnement .profile {
-//   position: relative;
-//   width: 43px;
-//   height: 43px;
-//   background-image: url(https://c.animaapp.com/Uo5RzBKg/img/rectangle-2-1@2x.png);
-//   background-size: cover;
-//   background-position: 50% 50%;
-// }
+.mon-stationnement .profile {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  background-image: url(https://c.animaapp.com/Uo5RzBKg/img/rectangle-2-1@2x.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
