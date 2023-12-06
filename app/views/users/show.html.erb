@@ -29,6 +29,14 @@
       <span>Mot de passe</span>
       <div class="profile-info-value">**********</div>
     </div>
+
+   <div class="profile-info-item">
+  <i class="fas fa-sign-out-alt"></i>
+  <div class="profile-info-value">
+<%= button_to "Log out", destroy_user_session_path, method: :delete, class: "button-primary" %>  </div>
+</div>
+
+    </div>
   </div>
 </div>
   </div>
