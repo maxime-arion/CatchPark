@@ -38,7 +38,8 @@ class ParkingsController < ApplicationController
 
   def update
     if @parking.update(parking_params)
-      redirect_to @parking, notice: parking_notice_message
+      update_status_based_on_duration
+      redirect_to @parking, notice: 'Le stationnement a été mis à jour avec succès.'
     else
       render :edit
     end
@@ -51,11 +52,12 @@ class ParkingsController < ApplicationController
   end
 
   def parking_params
-    params.require(:parking).permit(:address, :price, :status, :start_time, :end_time, :duration, :user_id)
+    params.require(:parking).permit(:duration, :address, :status_checkbox)
   end
 
-  def parking_notice_message
-    "Parking updated successfully."
+  def update_status_based_on_duration
+    # Mettez en œuvre la logique pour mettre à jour le statut en fonction de la durée ici
+    # Par exemple, si la durée est présente, marquez le parking comme non disponible
+    @parking.update(status: @parking.duration.present?)
   end
-
 end

@@ -1,28 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- edit.html.erb pour le contrôleur Parkings -->
+<div class="parking-details">
+  <h1>Modifier Statut Parking</h1>
+  <%= form_for @parking, url: parking_path(@parking), method: :patch do |form| %>
+    <fieldset>
+      <%= form.label :duration, 'Durée de Stationnement (en minutes) :', class: 'form-label' %>
+      <div class="duration-input">
+        <%= form.number_field :duration, class: 'form-control' %>
+        <span class="duration-unit"></span>
+      </div>
+    </fieldset>
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="globals.css" />
-  <link rel="stylesheet" href="styleguide.css" />
-  <link rel="stylesheet" href="style.css" />
+    <fieldset>
+  <%= form.label :status, 'Statut :' %>
+  <%= form.check_box :status_checkbox %> <!-- Utilisez la méthode virtuelle -->
+  <%= form.hidden_field :status, value: '1' %> <!-- Champ caché pour la valeur non cochée -->
+    </fieldset>
+    <!-- Ajoutez d'autres champs ou éléments de formulaire au besoin -->
 
-<body>
-  <h1><br><br><br>Modifier Parking</h1>
-
-  <%= form_with model: @parking, local: true do |form| %>
-    <%= form.label :durée %>
-    <%= form.text_field :durée %>
-
-    <%= form.label :adresse %>
-    <%= form.text_field :adresse %>
-
-    <%= form.label :status %>
-    <%= form.check_box :status %>
-
-    <%= form.submit 'Mettre à jour' %>
-
-    <%= link_to 'Retour', parking_path(@parking) %>
+    <!-- Boutons d'action -->
+    <div class="form-actions">
+      <%= form.submit 'Mettre à jour', class: 'button' %>
+      <%= link_to 'Retour à la carte', parkings_path, class: 'button' %>
+    </div>
   <% end %>
-
-</html>
+</div>
