@@ -133,6 +133,7 @@ export default class extends Controller {
     //   this.userLocationMarker.setLngLat([longitude, latitude]);
     // }
 
-    this.map.flyTo({ center: [longitude, latitude], zoom: 15 });
+    this.map.flyTo({
+      center: [longitude, latitude], zoom: map.current.getZoom() });
   }
 }
