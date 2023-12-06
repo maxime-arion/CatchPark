@@ -6,11 +6,9 @@
          <%= link_to user_profile_path do %>
               <li class="btn-list-item"><i class="fas fa-user-circle"></i></li>
             <% end %>
-          <li>
-           <%= link_to 'Accueil', root_path, class: "link-nav" %>
-          </li>
+          <li> <%= link_to 'Accueil', root_path, class: "link-nav" %></li>
           <li> <%= link_to 'Carte', parkings_path, class: "link-nav" %></li>
-           <li><a href="#">Contact</a></li>
+          <li> <%= link_to "Contact", "mailto:contact@catchpark.fr", class: "contact-link" %></li>
         </ul>
           <div class="buttons">
             <%= link_to user_profile_path do %>
@@ -18,6 +16,7 @@
             <% end %>
           </div>
         <button class="menu-btn" data-action="click->navbar#toggle">
+
           <i class="fas fa-bars"></i>
         </button>
       </nav>

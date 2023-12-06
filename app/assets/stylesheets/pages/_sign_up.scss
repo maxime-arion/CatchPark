@@ -1,10 +1,10 @@
 .signup-container {
-  max-width: 400px;
-  margin: 40px auto;
+  max-width: 600px;
+  margin: 100px 25px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .signup-form .field {
@@ -24,7 +24,7 @@
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background-color: blue;
+  background-color: #7aa98d;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -42,3 +42,21 @@
 .errors li {
   margin-bottom: 5px;
 }
+
+
+.social-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+}
+
+.social-button.google { background-color: #db4437; }
+.social-button.facebook { background-color: #3b5998; }
+.social-button.linkedin { background-color: #0077b5; }
