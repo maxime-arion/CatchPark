@@ -19,8 +19,9 @@
 
     <!-- Boutons d'action -->
     <div class="form-actions">
-      <%= form.submit 'Mettre à jour', class: 'button' %>
-      <%= link_to 'Retour à la carte', parkings_path, class: 'button' %>
+      <%= form.submit 'Valider', class: 'button' %>
+      <%= link_to 'Retour', parkings_path, class: 'button' %>
+      <%= link_to "Supprimer", parking_path, data: {turbo_method: :delete }, class: "btn btn-danger" %>
     </div>
   <% end %>
 </div>
