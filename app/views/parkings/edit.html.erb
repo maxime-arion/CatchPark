@@ -1,6 +1,6 @@
 <div class="parking-edit">
   <div class="parking-edit-container">
-    <h1 class="parking-edit-title">Modifier mon<br><span class="stationnement">Stationnement</span></h1>
+    <h1 class="parking-edit-title">Modifier<br><span class="stationnement">Stationnement</span></h1>
 
     <%= form_for @parking, url: parking_path(@parking), method: :patch do |form| %>
       <%= form.label :duration, 'Durée de Stationnement (en minutes) :', class: 'form-label' %>
@@ -12,7 +12,8 @@
       <div class="form-input">
         <%= form.label :status, 'Statut :' %>
         <%= form.check_box :status_checkbox %> <!-- Utilisez la méthode virtuelle -->
-        <%= form.hidden_field :status, value: '1' %> <!-- Champ caché pour la valeur non cochée -->
+        <%= form.hidden_field :status %>
+        <!-- Champ caché pour la valeur non cochée -->
       </div>
       <!-- Ajoutez d'autres champs ou éléments de formulaire au besoin -->
 

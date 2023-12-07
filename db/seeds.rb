@@ -38,19 +38,19 @@ parking_1 = Parking.new(longitude: -1.545957, latitude: 47.214581, address: "10 
 parking_1.save!
 
 p time = Time.new(2023, 12, 7, 7, 15, 0)
-parking_2 = Parking.new(longitude: -1.544267, latitude: 47.212722, address: "12 Av. Carnot, 44000 Nantes", status: false )
+parking_2 = Parking.new(longitude: -1.544267, latitude: 47.212722, address: "12 Av. Carnot, 44000 Nantes", status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_2.save!
 
 p time = Time.new(2023, 12, 7, 15, 27, 0)
-parking_3 = Parking.new(longitude: -1.550955, latitude: 47.215615, address: "10 Rue de Strasbourg, 44000 Nantes", status: false )
+parking_3 = Parking.new(longitude: -1.550955, latitude: 47.215615, address: "10 Rue de Strasbourg, 44000 Nantes", status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_3.save!
 
 p time = Time.new(2023, 12, 7, 14, 9, 0)
-parking_4 = Parking.new(longitude: -1.552300, latitude: 47.217137, address: "21 Rue de Strasbourg, 44000 Nantes", status: false )
+parking_4 = Parking.new(longitude: -1.552300, latitude: 47.217137, address: "21 Rue de Strasbourg, 44000 Nantes", status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_4.save!
 
 p time = Time.new(2023, 12, 7, 8, 30, 0)
-parking_5 = Parking.new(longitude: -1.552169, latitude: 47.219695, address: "17 Rue du Roi Albert, 44000 Nantes", status: false )
+parking_5 = Parking.new(longitude: -1.552169, latitude: 47.219695, address: "17 Rue du Roi Albert, 44000 Nantes", status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_5.save!
 
 p time = Time.new(2023, 12, 7, 10, 44, 0)
@@ -66,15 +66,15 @@ parking_8 = Parking.new(longitude: -1.552620, latitude: 47.217611, address: "30 
 parking_8.save!
 
 p time = Time.new(2023, 12, 7, 17, 0, 0)
-parking_9 = Parking.new(longitude: -1.552167, latitude: 47.211683, address: "7 Chau. de la Madeleine, 44000 Nantes", status: false )
+parking_9 = Parking.new(longitude: -1.552167, latitude: 47.211683, address: "7 Chau. de la Madeleine, 44000 Nantes", status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_9.save!
 
 p time = Time.new(2023, 12, 7, 18, 0, 0)
-parking_10 = Parking.new(longitude: -1.550355, latitude: 47.211408, address: "4 Rue Perrault, 44000 Nantes", status: false )
+parking_10 = Parking.new(longitude: -1.550355, latitude: 47.211408, address: "4 Rue Perrault, 44000 Nantes", status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_10.save!
 
 p time = Time.new(2023, 12, 7, 20, 10, 0)
-parking_11 = Parking.new(longitude:  -1.549982, latitude: 47.212018, address: "4 Rue des Olivettes, 44000 Nantes", status: false )
+parking_11 = Parking.new(longitude:  -1.549982, latitude: 47.212018, address: "4 Rue des Olivettes, 44000 Nantes", status: false, start_time: time, end_time: (time + 60000*0.25), duration: (time + 60000*0.25) - time, user: user_1 )
 parking_11.save!
 
 p time = Time.new(2023, 12, 7, 23, 0, 0)
