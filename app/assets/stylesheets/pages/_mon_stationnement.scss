@@ -20,6 +20,22 @@
   color: #333;
 }
 
+.btn-btn-danger {
+  margin-top: 1em;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #f4405a; /* Modifier la couleur ici */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+
 .valid-button {
   margin-top: 1em;
   padding: 8px 22px;
@@ -47,7 +63,7 @@
   .form-control {
     flex: 1;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 16px;
     border: 1px solid #ccc;
   }
 
@@ -70,14 +86,5 @@
     // &:hover {
     //   background-color: #7aa98d;
     // }
-  }
-
-  .btn-danger {
-    background-color: #ff4747;
-    color: #fff;
-
-    &:hover {
-      background-color: #d92c2c;
-    }
   }
 }

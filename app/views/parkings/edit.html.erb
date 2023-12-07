@@ -9,8 +9,8 @@
         <span class="duration-unit"></span>
       </div>
 
-      <div class="form-input">
-        <%= form.label :status, 'Statut :' %>
+      <br><div class="form-edit-statut">
+        <%= form.label :status, 'Rendre disponible :' %>
         <%= form.check_box :status_checkbox %> <!-- Utilisez la méthode virtuelle -->
         <%= form.hidden_field :status %>
         <!-- Champ caché pour la valeur non cochée -->
@@ -20,8 +20,8 @@
       <!-- Boutons d'action -->
       <div class="form-actions">
         <%= form.submit 'Valider', class: 'valid-button' %>
-        <%= link_to 'Retour', parkings_path, class: 'back-link' %>
-        <%= link_to "Supprimer", parking_path, data: {turbo_method: :delete }, class: "btn btn-danger" %>
+        <%= link_to "Supprimer", parking_path, data: {turbo_method: :delete }, class: "btn-btn-danger" %>
+        <%= link_to 'Retour', parking_path, class: 'back-link' %>
       </div>
     <% end %>
   </div>

@@ -21,14 +21,14 @@ html, body {
 
 .parking-details form label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
   font-weight: bold;
 }
 .parking-details-title {
   font-size: 2.1em;
   font-weight:bold;
   color: #d9e8e2;
-  margin-bottom: 30px;
+  margin-bottom: 1px;
 }
 
 .en-cours{
@@ -73,3 +73,34 @@ html, body {
 .edit-button:hover {
   background-color: #7aa98d;
 }
+
+.parking-adress {
+ text-align: center;
+}
+.parking-duration {
+  text-align: center;
+ }
+ .parking-status {
+  text-align: center;
+ }
+ .icon-status-wrapper {
+  gap: 20px;
+  margin-top: 31px;
+
+  p {
+    margin: 0;
+  }
+ }
+.icon-free {
+  font-size: 30px;
+  color: #7aa98d;
+}
+.icon-busy {
+  font-size: 30px;
+  color: #f4405a;
+}
+
+.icon-time-wrapper {
+  gap: 20px;
+  margin-top: 31px;
+ }

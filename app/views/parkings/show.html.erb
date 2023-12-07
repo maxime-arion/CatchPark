@@ -3,17 +3,40 @@
   <div class="parking-details-container">
    <h1 class="parking-details-title">Stationnement<br><span class="en-cours">En cours</span></h1>
     <form action="<%= parking_path(@parking) %>" method="post">
-      <label for="address"><br></label>
-      <p id="address"><%= @parking.address %></p><br>
-      <fieldset>
-      <label for="duration"></label>
-      <p id="duration"><%= @parking.duration %> heures</p>
-      </fieldset>
 
-      <fieldset>
+      <div class="parking-adress">
+      <label for="address"><br></label>
+      <h3 id="address"><%= @parking.address %></h3>
+      <div>
+
+     <div class="parking-duration">
+      <label for="duration"></label>
+      <% if @parking.duration == 0 %>
+
+      <H4 id="duration"></h4>
+      <% else %>
+
+      <h4 id="duration"><%= @parking.duration %> <%= @parking.duration > 1 ? 'heure'.pluralize : 'heure' %></h4>
+            <% end %>
+
+     <div>
+
+     <div class="parking-status">
       <label for="status"></label>
-      <p id="status"><%= @parking.status ? 'Libre' : 'Occupé' %></p>
-      </fieldset>
+      <h3 id="status">
+        <% if @parking.status == true %>
+        <div class="d-flex align-items-center justify-content-center icon-status-wrapper">
+          <i class="fa-solid fa-circle-check icon-free"></i>
+          <h3>Libre</h3>
+        </div>
+        <% elsif @parking.status == false %>
+        <div class="d-flex align-items-center justify-content-center icon-status-wrapper">
+          <i class="fa-solid fa-circle-xmark icon-busy"></i>
+          <h3>Occupé</h3>
+        </div>
+        <% end %>
+      </h3>
+    <div>
 
       <div class="form-actions">
       <%= link_to 'Modifier', edit_parking_path(@parking), class: 'edit-button' %>
