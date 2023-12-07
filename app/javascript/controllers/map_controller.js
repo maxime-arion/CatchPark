@@ -21,8 +21,8 @@ export default class extends Controller {
     this.fitMapToMarkers();
     this.initializeGeolocation();
     this.addZoomControls();
-
   }
+  
   addZoomControls() {
     const nav = new mapboxgl.NavigationControl();
     this.map.addControl(nav, 'bottom-right');

@@ -4,10 +4,19 @@
     <p class="parking-card-detail"><span><%= parking.address %></span></p>
     <p class="parking-card-detail"><span><%= parking.status ? 'Disponible' : 'Non disponible' %></span></p>
     <p class="parking-card-detail">
+    <%if parking.status == true %>
+    <div class='d-none'>
       <div data-controller="countdown"
       data-countdown-end-time-value="<%= parking.end_time.to_i %>">
         Se libère dans : <span data-target="countdown.output"></span>
       </div>
+    </div>
+    <% else %>
+          <div data-controller="countdown"
+      data-countdown-end-time-value="<%= parking.end_time.to_i %>">
+        Se libère dans : <span data-target="countdown.output"></span>
+      </div>
+    <% end %>
     </p>
     <%= link_to 'Voir détails', parking_path(parking), class: "parking-card-link" %>
   </div>

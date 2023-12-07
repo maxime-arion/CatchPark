@@ -43,7 +43,7 @@ class ParkingsController < ApplicationController
 
   def update
     if @parking.update(parking_params)
-      update_status_based_on_duration
+      # update_status_based_on_duration
       redirect_to @parking, notice: 'Le stationnement a été mis à jour avec succès.'
     else
       render :edit

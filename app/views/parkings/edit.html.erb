@@ -12,7 +12,8 @@
       <div class="form-input">
         <%= form.label :status, 'Statut :' %>
         <%= form.check_box :status_checkbox %> <!-- Utilisez la méthode virtuelle -->
-        <%= form.hidden_field :status, value: '1' %> <!-- Champ caché pour la valeur non cochée -->
+        <%= form.hidden_field :status %>
+        <!-- Champ caché pour la valeur non cochée -->
       </div>
       <!-- Ajoutez d'autres champs ou éléments de formulaire au besoin -->
 
