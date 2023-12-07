@@ -1,4 +1,6 @@
-<div class="parking-card">
+ <%
+=begin%>
+ <div class="parking-card">
   <div class="parking-card-content">
     <h4 class="parking-card-title"><strong>Stationnement</strong></h4> <!-- Corrected missing closing tag -->
     <p class="parking-card-detail"><span><%= parking.address %></span></p>
@@ -17,6 +19,41 @@
         Se libère dans : <span data-target="countdown.output"></span>
       </div>
     <% end %>
+    </p>
+    <%= link_to 'Voir détails', parking_path(parking), class: "parking-card-link" %>
+  </div>
+</div>
+<%
+=end%>
+
+<%
+=begin%>
+ # <div class="parking-card">
+#   <div class="parking-card-content">
+#     <h4 class="parking-card-title"><strong>Parking Info</strong></h4>
+#     <p class="parking-card-detail"><span><%= parking.address %></span></p>
+#     <p class="parking-card-detail"><span><%= parking.status ? 'Disponible' : 'Non disponible' %></span></p>
+#     <p class="parking-card-detail">
+#       <div data-controller="countdown" data-countdown-end-time-value="<%= parking.end_time.to_i %>">
+#         Se libère dans : <span data-target="countdown.output"></span>
+#       </div>
+#     </p>
+#     <%= link_to 'Voir détails', parking_path(parking), class: "parking-card-link" %>
+#   </div>
+# </div>
+<%
+=end%>
+
+<div class="parking-card">
+  <div class="parking-card-content">
+    <h4 class="parking-card-title"><strong>Parking Info</strong></h4>
+    <p class="parking-card-detail"><span><%= parking.address %></span></p>
+    <p class="parking-card-detail"><span><%= parking.status ? 'Disponible' : 'Non disponible' %></span></p>
+    <p class="parking-card-detail">
+      <div data-controller="countdown" class="<%= parking.status ? '' : 'd-none' %>"
+      data-countdown-end-time-value="<%= parking.end_time.to_i %>">
+        Se libère dans : <span data-target="countdown.output"></span>
+      </div>
     </p>
     <%= link_to 'Voir détails', parking_path(parking), class: "parking-card-link" %>
   </div>
