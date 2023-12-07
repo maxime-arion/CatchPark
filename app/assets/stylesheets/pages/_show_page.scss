@@ -5,21 +5,14 @@ html, body {
   margin: 20;
   padding: 0;
 }
-
-// body {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
 .parking-details {
-  position: relative;
-  top: 70px;
-  max-width: 800px;
-  padding: 50px;
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  border-radius: 15px;
+  max-width: 600px;
+  margin: 25px;
+  margin-top: 70px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .parking-details form fieldset {
@@ -31,14 +24,24 @@ html, body {
   margin-bottom: 5px;
   font-weight: bold;
 }
+.parking-details-title {
+  font-size: 2.1em;
+  font-weight:bold;
+  color: #d9e8e2;
+  margin-bottom: 30px;
+}
+
+.en-cours{
+  font-weight:bold;
+  color: #333;
+}
 
 .parking-details form p {
   margin-top: 0;
 }
 
 .parking-details .form-actions {
-  margin-top: 15px;
-  text-align: center; /* Pour centrer les boutons horizontalement */
+  margin-top: 15px; /* Pour centrer les boutons horizontalement */
 }
 
 .parking-details .form-actions .button {
@@ -50,4 +53,23 @@ html, body {
   color: #fff;
   text-decoration: none;
   border-radius: 3px;
+}
+.edit-button {
+  margin-top:1em;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #d9e8e2;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+
+.edit-button:hover {
+  background-color: #7aa98d;
 }
