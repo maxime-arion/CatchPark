@@ -1,27 +1,27 @@
-<!-- edit.html.erb pour le contrôleur Parkings -->
-<div class="parking-details">
-  <h1>Modifier Statut Parking</h1>
-  <%= form_for @parking, url: parking_path(@parking), method: :patch do |form| %>
-    <fieldset>
+<div class="parking-edit">
+  <div class="parking-edit-container">
+    <h1 class="parking-edit-title">Modifier mon<br><span class="stationnement">Stationnement</span></h1>
+
+    <%= form_for @parking, url: parking_path(@parking), method: :patch do |form| %>
       <%= form.label :duration, 'Durée de Stationnement (en minutes) :', class: 'form-label' %>
       <div class="duration-input">
         <%= form.number_field :duration, class: 'form-control' %>
         <span class="duration-unit"></span>
       </div>
-    </fieldset>
 
-    <fieldset>
-  <%= form.label :status, 'Statut :' %>
-  <%= form.check_box :status_checkbox %> <!-- Utilisez la méthode virtuelle -->
-  <%= form.hidden_field :status, value: '1' %> <!-- Champ caché pour la valeur non cochée -->
-    </fieldset>
-    <!-- Ajoutez d'autres champs ou éléments de formulaire au besoin -->
+      <div class="form-input">
+        <%= form.label :status, 'Statut :' %>
+        <%= form.check_box :status_checkbox %> <!-- Utilisez la méthode virtuelle -->
+        <%= form.hidden_field :status, value: '1' %> <!-- Champ caché pour la valeur non cochée -->
+      </div>
+      <!-- Ajoutez d'autres champs ou éléments de formulaire au besoin -->
 
-    <!-- Boutons d'action -->
-    <div class="form-actions">
-      <%= form.submit 'Valider', class: 'button' %>
-      <%= link_to 'Retour', parkings_path, class: 'button' %>
-      <%= link_to "Supprimer", parking_path, data: {turbo_method: :delete }, class: "btn btn-danger" %>
-    </div>
-  <% end %>
+      <!-- Boutons d'action -->
+      <div class="form-actions">
+        <%= form.submit 'Valider', class: 'valid-button' %>
+        <%= link_to 'Retour', parkings_path, class: 'back-link' %>
+        <%= link_to "Supprimer", parking_path, data: {turbo_method: :delete }, class: "btn btn-danger" %>
+      </div>
+    <% end %>
+  </div>
 </div>

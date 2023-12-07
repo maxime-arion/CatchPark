@@ -1,282 +1,83 @@
-// Fichier scss pour la page 'edit' du parking
-.mon-stationnement {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+.parking-edit {
+  max-width: 600px;
+  margin: 25px;
+  margin-top: 70px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.mon-stationnement .div {
-  background-color: #ffffff;
-  width: 375px;
-  height: 812px;
-  position: relative;
+.parking-edit-title {
+  font-size: 2.1em;
+  font-weight:bold;
+  color: #D9E8E2;
+  margin-bottom: 30px;
 }
 
-.mon-stationnement .text-wrapper {
-  position: absolute;
-  width: 132px;
-  top: 113px;
-  left: 121px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 300;
-  color: #d9e8e2;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
+.stationnement {
+  font-weight:bold;
+  color: #333;
 }
 
-.mon-stationnement .text-wrapper-2 {
-  position: absolute;
-  top: 141px;
-  left: 115px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 600;
-  color: #130f26;
-  font-size: 30px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.mon-stationnement .progress {
-  position: absolute;
-  width: 212px;
-  height: 219px;
-  top: 205px;
-  left: 84px;
-  background-image: url(https://c.animaapp.com/Uo5RzBKg/img/ellipse-3.svg);
-  background-size: 100% 100%;
-}
-
-.mon-stationnement .overlap-group {
-  position: relative;
-  width: 181px;
-  height: 217px;
-  left: 31px;
-}
-
-.mon-stationnement .ellipse {
-  position: absolute;
-  width: 106px;
-  height: 217px;
-  top: 0;
-  left: 75px;
-}
-
-.mon-stationnement .time {
-  position: absolute;
-  width: 158px;
-  height: 34px;
-  top: 92px;
-  left: 0;
-}
-
-.mon-stationnement .p {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 700;
-  color: #130f26;
-  font-size: 28px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.mon-stationnement .text {
-  position: absolute;
-  width: 170px;
-  top: 461px;
-  left: 108px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 300;
-  color: #919191;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-// affiche la carte
-.mon-stationnement .zone {
-  position: absolute;
-  width: 300px;
-  height: 113px;
-  top: 502px;
-  left: 40px;
-}
-
-.mon-stationnement .overlap {
-  position: relative;
-  width: 296px;
-  height: 113px;
-  background-color: #130f2614;
-  border-radius: 27px;
-  border: 1px solid;
-  border-color: #cccccc;
-}
-
-.mon-stationnement .location-wrapper {
-  position: absolute;
-  width: 90px;
-  height: 79px;
-  top: 18px;
-  left: 187px;
-  background-image: url(https://c.animaapp.com/Uo5RzBKg/img/map.svg);
-  background-size: 100% 100%;
-}
-
-.mon-stationnement .location {
-  position: absolute;
-  width: 40px;
-  height: 41px;
-  top: 17px;
-  left: 24px;
-}
-
-.mon-stationnement .text-wrapper-3 {
-  position: absolute;
-  top: 17px;
-  left: 15px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 300;
-  color: #333333;
-  font-size: 18px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.mon-stationnement .element-boulevard {
-  position: absolute;
-  top: 48px;
-  left: 16px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 300;
-  color: #333333;
-  font-size: 17px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.mon-stationnement .overlap-2 {
-  position: absolute;
-  width: 319px;
-  height: 145px;
-  top: 653px;
-  left: 28px;
-}
-
-.mon-stationnement .button-skip {
-  display: flex;
-  width: 319px;
-  height: 73px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 24px 33px;
-  position: absolute;
-  top: 72px;
-  left: 0;
-  border-radius: 15px;
-}
-
-.mon-stationnement .skip {
-  position: relative;
-  width: fit-content;
-  margin-top: -0.5px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 300;
-  color: var(--black);
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.mon-stationnement .CTA {
-  display: inline-flex;
-  align-items: flex-start;
-  position: absolute;
-  top: 0;
-  left: 14px;
-  box-shadow: 0px 4px 4px #ae232340;
-  all: unset;
-  box-sizing: border-box;
-}
-
-.mon-stationnement .start-booking-wrapper {
-  display: flex;
-  width: 294px;
-  height: 72.31px;
-  align-items: center;
-  justify-content: space-around;
-  gap: 10px;
-  padding: 22px 67px;
-  position: relative;
-  background-color: #7aa98d;
-  color: white;
-  border-radius: 19px;
-}
-
-.mon-stationnement .start-booking {
-  position: relative;
-  width: fit-content;
-  margin-left: -42px;
-  margin-right: -42px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 400;
-  color: #201f27;
-  font-size: 21px;
+.valid-button {
+  margin-top: 1em;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
   text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #d9e8e2; /* Modifier la couleur ici */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: black;
+
+  // &:hover {
+  //   background-color: #7aa98d;
+  // }
 }
 
-.mon-stationnement .header {
+.duration-input {
   display: flex;
-  width: 316px;
   align-items: center;
+
+  .form-control {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .duration-unit {
+    margin-left: 10px;
+  }
+}
+
+.form-actions {
+  display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 35px;
-  left: 29px;
-  background-color: transparent;
-}
 
-.mon-stationnement .logo {
-  display: inline-flex;
-  flex-direction: column;
-  height: 54.25px;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  flex: 0 0 auto;
-}
+  .button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 
-.mon-stationnement .img {
-  position: relative;
-  width: 40px;
-  height: 40px;
-}
+    // &:hover {
+    //   background-color: #7aa98d;
+    // }
+  }
 
-.mon-stationnement .text-wrapper-4 {
-  position: relative;
-  width: 54px;
-  height: 13.31px;
-  margin-top: -0.06px;
-  font-family: "Montserrat", Helvetica;
-  font-weight: 300;
-  color: #433f56;
-  font-size: 8px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
+  .btn-danger {
+    background-color: #ff4747;
+    color: #fff;
 
-// .mon-stationnement .profile {
-//   position: relative;
-//   width: 43px;
-//   height: 43px;
-//   background-image: url(https://c.animaapp.com/Uo5RzBKg/img/rectangle-2-1@2x.png);
-//   background-size: cover;
-//   background-position: 50% 50%;
-// }
+    &:hover {
+      background-color: #d92c2c;
+    }
+  }
+}
