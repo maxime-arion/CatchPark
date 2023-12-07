@@ -22,7 +22,7 @@ export default class extends Controller {
     this.initializeGeolocation();
     this.addZoomControls();
   }
-  
+
   addZoomControls() {
     const nav = new mapboxgl.NavigationControl();
     this.map.addControl(nav, 'bottom-right');
@@ -69,7 +69,7 @@ export default class extends Controller {
     if (status === true) {
       return '#7aa98d'; // Vert pour disponible
     } else if (status === false) {
-      return '#f4405a'; // Orange pour non disponible
+      return '#f4405a'; // Rouge pour non disponible
     } else {
       return 'grey';
     }
