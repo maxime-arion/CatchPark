@@ -36,6 +36,11 @@ class ParkingsController < ApplicationController
   def edit
   end
 
+  def destroy
+    @parking.destroy
+    redirect_to parkings_path, notice: 'Le stationnement a été supprimé avec succès.'
+  end
+
   def update
     if @parking.update(parking_params)
       update_status_based_on_duration
