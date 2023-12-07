@@ -1,9 +1,9 @@
 <div class="parking-edit">
   <div class="parking-edit-container">
-    <h1 class="parking-edit-title">Modifier mon<br><span class="stationnement">Stationnement</span></h1>
+    <h1 class="parking-edit-title">Modifier<br><span class="stationnement">Stationnement</span></h1>
 
     <%= form_for @parking, url: parking_path(@parking), method: :patch do |form| %>
-      <%= form.label :duration, 'Durée de Stationnement (en minutes) :', class: 'form-label' %>
+      <%= form.label :duration, 'Durée de Stationnement (en heures) :', class: 'form-label' %>
       <div class="duration-input">
         <%= form.number_field :duration, class: 'form-control' %>
         <span class="duration-unit"></span>

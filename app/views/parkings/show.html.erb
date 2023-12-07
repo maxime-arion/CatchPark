@@ -1,13 +1,13 @@
 <!-- show.html.erb pour le contrôleur Parkings -->
 <div class="parking-details">
   <div class="parking-details-container">
-   <h1 class="parking-details-title">Mon Stationnement<br><span class="en-cours">En cours</span></h1>
+   <h1 class="parking-details-title">Stationnement<br><span class="en-cours">En cours</span></h1>
     <form action="<%= parking_path(@parking) %>" method="post">
       <label for="address"><br></label>
       <p id="address"><%= @parking.address %></p><br>
       <fieldset>
       <label for="duration"></label>
-      <p id="duration"><%= @parking.duration %> minutes</p>
+      <p id="duration"><%= @parking.duration %> heures</p>
       </fieldset>
 
       <fieldset>
