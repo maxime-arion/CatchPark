@@ -68,8 +68,8 @@
 
 .submit-button {
   background-color: #d9e8e2;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   color: black;
 }
 
@@ -93,8 +93,16 @@
   font-size: 14px;
   background-color: #d9e8e2;
   border: 1px solid #d0d0d0;
+  color:#333;
   border-radius: 25px;
   cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .fill-address-button:hover {
