@@ -9,10 +9,12 @@ export default class extends Controller {
   }
 
   setCountdown() {
+    // debugger
     const endTime = this.endTimeValue * 1000; // Convertissez en millisecondes
     const now = new Date().getTime();
     const distance = endTime - now;
 
+    console.log(distance);
     if (distance < 0) {
       // Si le temps est déjà écoulé
       this.element.textContent = "Stationnement terminé";
