@@ -42,6 +42,8 @@ class ParkingsController < ApplicationController
   end
 
   def update
+    @parking.start_time = DateTime.current + 3600.seconds
+    @parking.end_time = DateTime.current + (parking_params[:duration].to_i * 3600).seconds
     if @parking.update(parking_params)
       # update_status_based_on_duration
       redirect_to @parking, notice: 'Le stationnement a été mis à jour avec succès.'
